@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rank-Ready SEO Keywords | Elevated by Decimal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --orange: #FF6600;
+            --black: #1C1C1C;
+            --mate: #0f0f0f;
+            --white: #FFFFFF;
+            --offwhite: #f1bfb8;
+            --off: rgba(255, 102, 0, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--mate);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--mate);
+            overflow: hidden;
+            padding: 120px 20px 80px;
+        }
+
+        .search-waves {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+        }
+
+        .wave {
+            position: absolute;
+            width: 200%;
+            height: 200px;
+            background: linear-gradient(90deg, transparent, var(--orange), transparent);
+            border-radius: 50%;
+            animation: wave-pulse 8s ease-in-out infinite;
+        }
+
+        .wave:nth-child(1) {
+            top: 20%;
+            left: -50%;
+            animation-delay: 0s;
+        }
+
+        .wave:nth-child(2) {
+            top: 50%;
+            left: -50%;
+            animation-delay: 2s;
+        }
+
+        .wave:nth-child(3) {
+            bottom: 20%;
+            left: -50%;
+            animation-delay: 4s;
+        }
+
+        @keyframes wave-pulse {
+            0%, 100% {
+                transform: translateX(0) scale(1);
+                opacity: 0.05;
+            }
+            50% {
+                transform: translateX(25%) scale(1.1);
+                opacity: 0.15;
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, var(--white) 0%, var(--offwhite) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content .highlight {
+            color: var(--orange);
+            -webkit-text-fill-color: var(--orange);
+        }
+
+        .hero-content .tagline {
+            font-size: 1.4rem;
+            margin-bottom: 50px;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .keyword-preview {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .keyword-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .keyword-tag {
+            background: rgba(255, 102, 0, 0.2);
+            border: 1px solid var(--orange);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            color: var(--orange);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: keyword-float 3s ease-in-out infinite;
+        }
+
+        .keyword-tag:nth-child(odd) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes keyword-float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .keyword-tag i {
+            font-size: 0.8rem;
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--orange);
+            display: block;
+            text-shadow: 0 0 40px rgba(255, 102, 0, 0.5);
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 8px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--orange);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--orange);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-btn:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 102, 0, 0.5);
+        }
+
+        .cta-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .section-header .subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .orange-line {
+            width: 80px;
+            height: 4px;
+            background: var(--orange);
+            margin: 20px auto;
+        }
+
+        /* Industry Packages */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .package-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 45px 35px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--orange), #ff8c3a);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .package-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .package-card:hover {
+            background: rgba(255, 102, 0, 0.08);
+            border-color: var(--orange);
+            transform: translateY(-10px);
+            box-shadow: 0 30px 70px rgba(255, 102, 0, 0.2);
+        }
+
+        .package-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 40px rgba(255, 102, 0, 0.4);
+        }
+
+        .package-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            color: var(--white);
+        }
+
+        .package-count {
+            font-size: 1rem;
+            color: var(--orange);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .package-card p {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .package-includes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .include-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .include-item i {
+            color: var(--orange);
+            font-size: 1rem;
+        }
+
+        .package-price {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--orange);
+            margin-bottom: 20px;
+        }
+
+        .btn-buy {
+            display: block;
+            width: 100%;
+            padding: 14px 20px;
+            background: var(--orange);
+            border: 2px solid var(--orange);
+            color: var(--white);
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .btn-buy:hover {
+            background: #ff8c3a;
+            transform: translateY(-2px);
+        }
+
+        /* What's Included */
+        .included-section {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 30px;
+            padding: 60px 50px;
+            margin-top: 60px;
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .included-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--orange);
+            padding: 30px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .included-item:hover {
+            background: rgba(255, 102, 0, 0.08);
+            transform: translateX(10px);
+        }
+
+        .included-item h4 {
+            font-size: 1.4rem;
+            color: var(--orange);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .included-item h4 i {
+            font-size: 1.6rem;
+        }
+
+        .included-item p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+
+        /* Sample Preview */
+        .sample-section {
+            margin-top: 60px;
+        }
+
+        .sample-box {
+            background: rgba(28, 28, 28, 0.9);
+            border: 2px solid var(--orange);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .sample-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .sample-title {
+            font-size: 1.5rem;
+            color: var(--orange);
+        }
+
+        .download-sample {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 25px;
+            background: rgba(255, 102, 0, 0.2);
+            border: 1px solid var(--orange);
+            color: var(--orange);
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .download-sample:hover {
+            background: var(--orange);
+            color: var(--white);
+        }
+
+        .keyword-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
+
+        .keyword-table thead th {
+            background: rgba(255, 102, 0, 0.2);
+            padding: 15px;
+            text-align: left;
+            color: var(--orange);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .keyword-table thead th:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+
+        .keyword-table thead th:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+
+        .keyword-table tbody tr {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .keyword-table tbody tr:hover {
+            background: rgba(255, 102, 0, 0.1);
+        }
+
+        .keyword-table tbody td {
+            padding: 18px 15px;
+            color: rgba(255, 255, 255, 0.85);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .keyword-table tbody td:first-child {
+            border-left: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 10px 0 0 10px;
+            font-weight: 600;
+        }
+
+        .keyword-table tbody td:last-child {
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 0 10px 10px 0;
+        }
+
+        .difficulty-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .difficulty-easy {
+            background: rgba(39, 201, 63, 0.2);
+            color: #27c93f;
+            border: 1px solid #27c93f;
+        }
+
+        .difficulty-medium {
+            background: rgba(255, 189, 46, 0.2);
+            color: #ffbd2e;
+            border: 1px solid #ffbd2e;
+        }
+
+        .difficulty-hard {
+            background: rgba(255, 95, 86, 0.2);
+            color: #ff5f56;
+            border: 1px solid #ff5f56;
+        }
+
+        /* Benefits */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            background: rgba(255, 102, 0, 0.1);
+            border-color: var(--orange);
+            transform: translateY(-8px);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 102, 0, 0.2);
+            border: 2px solid var(--orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin: 0 auto 25px;
+            color: var(--orange);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .benefit-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            border-radius: 30px;
+            padding: 80px 60px;
+            text-align: center;
+            margin-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '🔍';
+            position: absolute;
+            font-size: 20rem;
+            top: -80px;
+            right: -80px;
+            opacity: 0.1;
+            transform: rotate(-20deg);
+        }
+
+        .final-cta > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .final-cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .cta-btn {
+            background: var(--white);
+            color: var(--orange);
+            border-color: var(--white);
+        }
+
+        .final-cta .cta-btn:hover {
+            background: var(--mate);
+            color: var(--white);
+            border-color: var(--mate);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .included-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .final-cta {
+                padding: 60px 30px;
+            }
+
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .stat-value {
+                font-size: 2.5rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .keyword-table {
+                font-size: 0.85rem;
+            }
+
+            .keyword-table thead th,
+            .keyword-table tbody td {
+                padding: 10px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="search-waves">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="product-badge">Digital Product</div>
+            <h1><span class="highlight">Rank-Ready</span> SEO Keywords</h1>
+            <p class="tagline">Skip months of keyword research. Get 500+ pre-researched, long-tail keywords with search volume, competition data, and content ideas—organized by industry and ready to rank.</p>
+            
+            <div class="keyword-preview">
+                <div class="keyword-items">
+                    <div class="keyword-tag">
+                        <i class="fas fa-search"></i>
+                        "best accounting software for startups"
+                    </div>
+                    <div class="keyword-tag">
+                        <i class="fas fa-search"></i>
+                        "affordable real estate photography"
+                    </div>
+                    <div class="keyword-tag">
+                        <i class="fas fa-search"></i>
+                        "digital marketing agency near me"
+                    </div>
+                    <div class="keyword-tag">
+                        <i class="fas fa-search"></i>
+                        "how to increase restaurant foot traffic"
+                    </div>
+                    <div class="keyword-tag">
+                        <i class="fas fa-search"></i>
+                        "custom web development services"
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-value">500+</span>
+                    <span class="stat-label">Keywords Per Package</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">12</span>
+                    <span class="stat-label">Industry Categories</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">Data-Backed Research</span>
+                </div>
+            </div>
+
+            <a href="#packages" class="cta-btn"><span>Browse Keyword Packages</span></a>
+        </div>
+    </section>
+
+    <!-- Industry Packages -->
+    <section id="packages">
+        <div class="section-header">
+            <h2>Industry-Specific Keyword Packages</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">Choose your industry and get 500+ targeted keywords with search volume, difficulty ratings, and content ideas.</p>
+        </div>
+
+        <div class="packages-grid">
+            <div class="package-card">
+                <div class="package-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h3>E-commerce</h3>
+                <p class="package-count">500+ Keywords</p>
+                <p>Product-focused keywords, buying intent terms, and comparison searches for online stores and marketplaces.</p>
+                <div class="package-includes">
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Product category keywords</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Buying intent terms</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Comparison searches</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Review-based keywords</span>
+                    </div>
+                </div>
+                <div class="package-price">$79</div>
+                <a href="#" class="btn-buy">Purchase Package</a>
+            </div>
+
+            <div class="package-card">
+                <div class="package-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Real Estate</h3>
+                <p class="package-count">500+ Keywords</p>
+                <p>Location-based searches, property types, buyer/seller intent keywords for real estate professionals.</p>
+                <div class="package-includes">
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Location-specific terms</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Property type keywords</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Buyer journey searches</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Investment terms</span>
+                    </div>
+                </div>
+                <div class="package-price">$79</div>
+                <a href="#" class="btn-buy">Purchase Package</a>
+            </div>
+
+            <div class="package-card">
+                <div class="package-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3>Health & Wellness</h3>
+                <p class="package-count">500+ Keywords</p>
+                <p>Medical services, wellness programs, fitness, and healthcare keywords with patient intent signals.</p>
+                <div class="package-includes">
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Symptom-based searches</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Treatment keywords</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Wellness terms</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>"Near me" variations</span>
+                    </div>
+                </div>
+                <div class="package-price">$79</div>
+                <a href="#" class="btn-buy">Purchase Package</a>
+            </div>
+
+            <div class="package-card">
+                <div class="package-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Restaurant & Food</h3>
+                <p class="package-count">500+ Keywords</p>
+                <p>Menu items, cuisine types, dining occasions, and local search terms for restaurants and food businesses.</p>
+                <div class="package-includes">
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Cuisine-specific terms</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Local search phrases</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Dining occasion keywords</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Menu item searches</span>
+                    </div>
+                </div>
+                <div class="package-price">$79</div>
+                <a href="#" class="btn-buy">Purchase Package</a>
+            </div>
+
+            <div class="package-card">
+                <div class="package-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Tech & SaaS</h3>
+                <p class="package-count">500+ Keywords</p>
+                <p>Software comparisons, solution-based searches, and technical keywords for technology companies.</p>
+                <div class="package-includes">
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Software comparison terms</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Feature-based searches</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Integration keywords</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Pricing/plan searches</span>
+                    </div>
+                </div>
+                <div class="package-price">$79</div>
+                <a href="#" class="btn-buy">Purchase Package</a>
+            </div>
+
+            <div class="package-card">
+                <div class="package-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Professional Services</h3>
+                <p class="package-count">500+ Keywords</p>
+                <p>Service-specific keywords for lawyers, accountants, consultants, and other professional services.</p>
+                <div class="package-includes">
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Service-specific terms</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Local professional searches</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Question-based keywords</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Urgency modifiers</span>
+                    </div>
+                </div>
+                <div class="package-price">$79</div>
+                <a href="#" class="btn-buy">Purchase Package</a>
+            </div>
+
+            <div class="package-card">
+                <div class="package-icon">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <h3>Fashion & Apparel</h3>
+                <p class="package-count">500+ Keywords</p>
+                <p>Style trends, clothing categories, brand terms, and seasonal fashion keywords for apparel businesses.</p>
+                <div class="package-includes">
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Style & trend keywords</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Product category terms</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Seasonal searches</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Size/fit keywords</span>
+                    </div>
+                </div>
+                <div class="package-price">$79</div>
+                <a href="#" class="btn-buy">Purchase Package</a>
+            </div>
+
+            <div class="package-card">
+                <div class="package-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Marketing & Advertising</h3>
+                <p class="package-count">500+ Keywords</p>
+                <p>Agency services, marketing tactics, platform-specific terms for marketing and advertising firms.</p>
+                <div class="package-includes">
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Service offering keywords</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Platform-specific terms</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Strategy searches</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Tool/software keywords</span>
+                    </div>
+                </div>
+                <div class="package-price">$79</div>
+                <a href="#" class="btn-buy">Purchase Package</a>
+            </div>
+
+            <div class="package-card">
+                <div class="package-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Education & Training</h3>
+                <p class="package-count">500+ Keywords</p>
+                <p>Course topics, certification searches, learning platforms, and educational service keywords.</p>
+                <div class="package-includes">
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Course-specific terms</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Learning method keywords</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Certification searches</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Skill-building terms</span>
+                    </div>
+                </div>
+                <div class="package-price">$79</div>
+                <a href="#" class="btn-buy">Purchase Package</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section style="background: rgba(255, 255, 255, 0.02);">
+        <div class="included-section">
+            <div class="section-header" style="margin-bottom: 0;">
+                <h2>What's Included in Every Package</h2>
+                <div class="orange-line"></div>
+                <p class="subtitle">More than just a list of keywords—get actionable data to build your content strategy.</p>
+            </div>
+
+            <div class="included-grid">
+                <div class="included-item">
+                    <h4><i class="fas fa-list"></i> 500+ Long-Tail Keywords</h4>
+                    <p>Carefully researched, low-competition keywords with high conversion potential. All organized by topic and search intent.</p>
+                </div>
+
+                <div class="included-item">
+                    <h4><i class="fas fa-chart-bar"></i> Search Volume Data</h4>
+                    <p>Monthly search volume estimates for each keyword so you can prioritize high-traffic opportunities.</p>
+                </div>
+
+                <div class="included-item">
+                    <h4><i class="fas fa-crosshairs"></i> Keyword Difficulty Scores</h4>
+                    <p>Competition ratings (Easy, Medium, Hard) to help you target winnable keywords first and build momentum.</p>
+                </div>
+
+                <div class="included-item">
+                    <h4><i class="fas fa-bullseye"></i> Search Intent Analysis</h4>
+                    <p>Classification by intent (Informational, Commercial, Transactional) so you match content to user needs.</p>
+                </div>
+
+                <div class="included-item">
+                    <h4><i class="fas fa-lightbulb"></i> Content Ideas</h4>
+                    <p>Suggested blog titles, article angles, and content formats for each keyword group to jumpstart creation.</p>
+                </div>
+
+                <div class="included-item">
+                    <h4><i class="fas fa-file-excel"></i> Ready-to-Use Spreadsheet</h4>
+                    <p>Organized Excel/CSV file with filters, sortable columns, and notes section for your team's workflow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Preview -->
+    <section class="sample-section">
+        <div class="section-header">
+            <h2>Preview the Data Format</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">See exactly what you're getting with our keyword packages—organized, actionable, ready to use.</p>
+        </div>
+
+        <div class="sample-box">
+            <div class="sample-header">
+                <h3 class="sample-title">Sample: Real Estate Keywords</h3>
+                <a href="#" class="download-sample">
+                    <i class="fas fa-download"></i>
+                    Download Sample
+                </a>
+            </div>
+
+            <table class="keyword-table">
+                <thead>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Search Volume</th>
+                        <th>Difficulty</th>
+                        <th>Intent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>affordable homes in [city]</td>
+                        <td>2,400/mo</td>
+                        <td><span class="difficulty-badge difficulty-easy">Easy</span></td>
+                        <td>Transactional</td>
+                    </tr>
+                    <tr>
+                        <td>best neighborhoods for families</td>
+                        <td>1,800/mo</td>
+                        <td><span class="difficulty-badge difficulty-medium">Medium</span></td>
+                        <td>Informational</td>
+                    </tr>
+                    <tr>
+                        <td>how to sell house fast</td>
+                        <td>3,600/mo</td>
+                        <td><span class="difficulty-badge difficulty-easy">Easy</span></td>
+                        <td>Commercial</td>
+                    </tr>
+                    <tr>
+                        <td>real estate agent near me</td>
+                        <td>8,100/mo</td>
+                        <td><span class="difficulty-badge difficulty-hard">Hard</span></td>
+                        <td>Transactional</td>
+                    </tr>
+                    <tr>
+                        <td>first time home buyer tips</td>
+                        <td>4,200/mo</td>
+                        <td><span class="difficulty-badge difficulty-medium">Medium</span></td>
+                        <td>Informational</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section style="background: rgba(255, 255, 255, 0.02);">
+        <div class="section-header">
+            <h2>Why Buy Pre-Researched Keywords?</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">Skip the learning curve and get straight to ranking with professionally researched keyword data.</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Save 40+ Hours</h3>
+                <p>Skip weeks of manual research and analysis. Get battle-tested keywords instantly.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Target Low Competition</h3>
+                <p>Focus on keywords you can actually rank for without massive backlink campaigns.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Faster Results</h3>
+                <p>Start ranking in weeks, not months, with strategic long-tail keyword targeting.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Expert Research</h3>
+                <p>Leverage SEO professionals' experience identifying high-converting keywords.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Content Roadmap</h3>
+                <p>Get a complete content strategy with 500+ topics to write about for months.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <h3>ROI-Focused</h3>
+                <p>Keywords selected for commercial intent and conversion potential, not just traffic.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section>
+        <div class="final-cta">
+            <h2>Start Ranking for the Right Keywords</h2>
+            <p>Stop guessing what to write about. Get 500+ researched keywords that your target customers are actively searching for—and start dominating your niche.</p>
+            <a href="#packages" class="cta-btn"><span>Choose Your Industry Package</span></a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.package-card, .benefit-card, .included-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Animated counters
+        const animateCounter = (element, target, suffix = '') => {
+            let current = 0;
+            const increment = target / 60;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + suffix;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + suffix;
+                }
+            }, 30);
+        };
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const stats = entry.target.querySelectorAll('.stat-value');
+                    stats.forEach(stat => {
+                        const text = stat.textContent;
+                        if (text.includes('+')) {
+                            const num = parseInt(text);
+                            stat.textContent = '0+';
+                            animateCounter(stat, num, '+');
+                        } else if (text.includes('%')) {
+                            const num = parseInt(text);
+                            stat.textContent = '0%';
+                            animateCounter(stat, num, '%');
+                        } else {
+                            const num = parseInt(text);
+                            stat.textContent = '0';
+                            animateCounter(stat, num, '');
+                        }
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsBar = document.querySelector('.stats-bar');
+        if (statsBar) {
+            statsObserver.observe(statsBar);
+        }
+    </script>
+</body>
+</html>

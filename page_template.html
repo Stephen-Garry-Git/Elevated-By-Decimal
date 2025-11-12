@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title - Elevated by Decimal</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/logo/logo-hed.png" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- REUSABLE STYLES - Include on all pages -->
+    <link rel="stylesheet" href="nav-footer.css">
+    
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="page-styles.css">
+</head>
+<body>
+    <!-- ========================================== 
+         NAVIGATION BAR (Copy to all pages)
+         ========================================== -->
+    
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <img src="/assets/logo/logo.png" alt="Elevated by Decimal">
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/Public/homepage.html#home">Home</a></li>
+                <li><a href="/Public/homepage.html#services">Services</a></li>
+                <li><a href="./elevated-about-page.html">About</a></li>
+                <li><a href="/Public/homepage.html#testimonials">Testimonials</a></li>
+                <li><a href="/Public/elevated-blog-page.html">Blog</a></li>
+                <li><a href="/Public/homepage.html#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="theme-toggle" onclick="toggleTheme()">
+                    <div class="theme-toggle-slider">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </div>
+                <a href="./elevated-signin-page.html" class="cta-btn" id="ctaBtn">Get Started</a>
+                <div class="mobile-toggle" id="toggleMobileMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================== 
+         PAGE CONTENT (Customize for each page)
+         ========================================== -->
+    <main style="padding-top: 80px; min-height: 80vh;">
+        <!-- Add your page-specific content here -->
+        <section style="padding: 100px 8%; text-align: center;">
+            <h1 style="font-family: 'Orbitron', sans-serif; font-size: 3rem; margin-bottom: 20px;">
+                Your Page Title
+            </h1>
+            <p style="font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto;">
+                Your page content goes here...
+            </p>
+        </section>
+    </main>
+
+    <!-- ========================================== 
+         FOOTER (Copy to all pages)
+         ========================================== -->
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Elevated by Decimal</h3>
+                <p>Empowering African brands to elevate through technology, marketing, and innovation.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1a2PFjNooH/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/elevatedbydcm?s=21"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/elevated-by-decimal/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/elevatedbydecimal?igsh=MWtoYmF2OW5ueHVjeA%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@elevatedbydecimal?_r=1&_t=ZS-91J3sGI60wM"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="./elevated-about-page.html">About</a></li>
+                    <li><a href="/Public/homepage.html#services">Services</a></li>
+                    <li><a href="/Public/homepage.html#testimonials">Testimonials</a></li>
+                    <li><a href="./elevated-contact-page (1).html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/Public/services/creative-designers.html">Digital Marketing</a></li>
+                    <li><a href="/Public/services/web-developers.html">Web Development</a></li>
+                    <li><a href="/Public/services/seo-keywords.html">SEO Services</a></li>
+                    <li><a href="/Public/services/content-writers.html">Content Writing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="./elevated-blog-page.html">Blog</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Elevated by Decimal. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- ========================================== 
+         REUSABLE JAVASCRIPT - Include on all pages
+         ========================================== -->
+    <script src="nav-footer.js"></script>
+
+    <!-- Page-specific JavaScript (optional) -->
+    <script>
+        // Add any page-specific JavaScript here
+        console.log('Page loaded successfully');
+    </script>
+</body>
+</html>

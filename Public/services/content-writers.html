@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Writers & Copywriters | Elevated by Decimal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --orange: #FF6600;
+            --black: #1C1C1C;
+            --mate: #0f0f0f;
+            --white: #FFFFFF;
+            --offwhite: #f1bfb8;
+            --off: rgba(255, 102, 0, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--mate);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--mate);
+            overflow: hidden;
+            padding: 120px 20px 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(45deg, transparent 30%, var(--off) 30%, var(--off) 70%, transparent 70%),
+                linear-gradient(-45deg, transparent 30%, rgba(255, 102, 0, 0.2) 30%, rgba(255, 102, 0, 0.2) 70%, transparent 70%);
+            background-size: 100px 100px;
+            opacity: 0.1;
+            animation: slide 20s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { background-position: 0 0; }
+            100% { background-position: 100px 100px; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, var(--white) 0%, var(--offwhite) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text .highlight {
+            color: var(--orange);
+            -webkit-text-fill-color: var(--orange);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-text .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--orange);
+            animation: underline-grow 2s ease-in-out infinite;
+        }
+
+        @keyframes underline-grow {
+            0%, 100% { width: 100%; }
+            50% { width: 60%; }
+        }
+
+        .hero-text .subheadline {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-feature i {
+            color: var(--orange);
+            font-size: 1.2rem;
+        }
+
+        .hero-visual {
+            position: relative;
+            height: 500px;
+        }
+
+        .writing-demo {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .writing-demo-1 {
+            top: 0;
+            left: 0;
+            width: 70%;
+            animation: float-writing 8s ease-in-out infinite;
+        }
+
+        .writing-demo-2 {
+            bottom: 50px;
+            right: 0;
+            width: 65%;
+            animation: float-writing 8s ease-in-out infinite 2s;
+        }
+
+        @keyframes float-writing {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(-2deg); }
+        }
+
+        .demo-header {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            color: var(--orange);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .demo-header i {
+            font-size: 1.2rem;
+        }
+
+        .demo-text {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        .typing-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1em;
+            background: var(--orange);
+            animation: blink 1s step-end infinite;
+            margin-left: 2px;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--orange);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--orange);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-btn:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 102, 0, 0.5);
+        }
+
+        .cta-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .section-header .subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .orange-line {
+            width: 80px;
+            height: 4px;
+            background: var(--orange);
+            margin: 20px auto;
+        }
+
+        /* Content Types Grid */
+        .content-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .content-type-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 45px 35px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-type-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--off) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .content-type-card:hover::before {
+            opacity: 1;
+        }
+
+        .content-type-card:hover {
+            border-color: var(--orange);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(255, 102, 0, 0.2);
+        }
+
+        .content-type-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .type-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(255, 102, 0, 0.4);
+        }
+
+        .content-type-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .content-type-card p {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .content-examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .example-tag {
+            background: rgba(255, 102, 0, 0.2);
+            border: 1px solid var(--orange);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--orange);
+        }
+
+        /* Who It's For */
+        .ideal-clients {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .client-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--orange);
+            padding: 35px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .client-card:hover {
+            background: rgba(255, 102, 0, 0.08);
+            transform: translateX(10px);
+        }
+
+        .client-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--orange);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .client-card h3 i {
+            font-size: 1.8rem;
+        }
+
+        .client-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+
+        /* Our Approach */
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .approach-grid::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 16.66%;
+            right: 16.66%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--orange), rgba(255, 102, 0, 0.2));
+            z-index: 0;
+        }
+
+        .approach-item {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .approach-number {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin: 0 auto 25px;
+            box-shadow: 0 15px 40px rgba(255, 102, 0, 0.4);
+            border: 5px solid var(--mate);
+        }
+
+        .approach-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .approach-item p {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+        }
+
+        /* Deliverables Section */
+        .deliverables-showcase {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 25px;
+            padding: 60px 50px;
+            margin-top: 60px;
+        }
+
+        .deliverables-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .deliverable-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .deliverable-item:hover {
+            background: rgba(255, 102, 0, 0.1);
+            border-color: var(--orange);
+            transform: scale(1.02);
+        }
+
+        .deliverable-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--orange);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.5rem;
+        }
+
+        .deliverable-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--white);
+        }
+
+        .deliverable-content p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Writing Samples Preview */
+        .samples-preview {
+            margin-top: 60px;
+        }
+
+        .sample-card {
+            background: linear-gradient(135deg, rgba(255, 102, 0, 0.1) 0%, rgba(255, 102, 0, 0.05) 100%);
+            border: 2px solid var(--orange);
+            border-radius: 20px;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sample-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 8rem;
+            color: var(--orange);
+            opacity: 0.2;
+            line-height: 1;
+        }
+
+        .sample-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .sample-type {
+            display: inline-block;
+            background: var(--orange);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .sample-text {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: rgba(255, 255, 255, 0.85);
+            font-style: italic;
+        }
+
+        /* Related Services */
+        .related-services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-link {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 35px 30px;
+            border-radius: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .service-link:hover {
+            background: rgba(255, 102, 0, 0.1);
+            border-color: var(--orange);
+            transform: translateY(-8px);
+        }
+
+        .service-link i {
+            font-size: 2.8rem;
+            color: var(--orange);
+            margin-bottom: 20px;
+        }
+
+        .service-link h4 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .service-link p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.6;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            border-radius: 25px;
+            padding: 80px 60px;
+            text-align: center;
+            margin-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '✍';
+            position: absolute;
+            font-size: 15rem;
+            top: -50px;
+            right: -50px;
+            opacity: 0.1;
+            transform: rotate(-15deg);
+        }
+
+        .final-cta > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .final-cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .cta-btn {
+            background: var(--white);
+            color: var(--orange);
+            border-color: var(--white);
+        }
+
+        .final-cta .cta-btn:hover {
+            background: var(--mate);
+            color: var(--white);
+            border-color: var(--mate);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-visual {
+                height: 350px;
+            }
+
+            .ideal-clients {
+                grid-template-columns: 1fr;
+            }
+
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .approach-grid::before {
+                display: none;
+            }
+
+            .deliverables-list {
+                grid-template-columns: 1fr;
+            }
+
+            .related-services {
+                grid-template-columns: 1fr;
+            }
+
+            .final-cta {
+                padding: 60px 30px;
+            }
+
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .hero-features {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .sample-card {
+                padding: 30px 25px;
+            }
+
+            .sample-card::before {
+                font-size: 5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Professional <span class="highlight">Content Writers</span> Who Turn Words Into Revenue</h1>
+                <p class="subheadline">From SEO-optimized blog posts to conversion-focused copy, our writers craft compelling content that captivates your audience and drives measurable business results.</p>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>SEO-Optimized</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Brand Voice Aligned</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Conversion-Focused</span>
+                    </div>
+                </div>
+
+                <a href="#contact" class="cta-btn"><span>Hire Expert Writers Today</span></a>
+            </div>
+
+            <div class="hero-visual">
+                <div class="writing-demo writing-demo-1">
+                    <div class="demo-header">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Blog Post</span>
+                    </div>
+                    <div class="demo-text">
+                        In today's digital landscape, content isn't just king—it's the entire kingdom. Strategic content marketing drives organic traffic, builds trust, and converts visitors into loyal customers<span class="typing-cursor"></span>
+                    </div>
+                </div>
+                <div class="writing-demo writing-demo-2">
+                    <div class="demo-header">
+                        <i class="fas fa-ad"></i>
+                        <span>Ad Copy</span>
+                    </div>
+                    <div class="demo-text">
+                        Stop losing customers to competitors. Our proven strategies increase conversions by 247% in 90 days. Limited spots available—claim yours now<span class="typing-cursor"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Types We Create -->
+    <section>
+        <div class="section-header">
+            <h2>Every Type of Content Your Brand Needs</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">From long-form thought leadership to punchy ad copy, we deliver content that performs across every channel and touchpoint.</p>
+        </div>
+
+        <div class="content-types">
+            <div class="content-type-card">
+                <div class="type-icon">
+                    <i class="fas fa-blog"></i>
+                </div>
+                <h3>Blog Posts & Articles</h3>
+                <p>In-depth, SEO-optimized content that establishes authority, ranks in search engines, and keeps readers engaged from headline to CTA.</p>
+                <div class="content-examples">
+                    <span class="example-tag">How-To Guides</span>
+                    <span class="example-tag">Industry Analysis</span>
+                    <span class="example-tag">Thought Leadership</span>
+                </div>
+            </div>
+
+            <div class="content-type-card">
+                <div class="type-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3>Sales & Marketing Copy</h3>
+                <p>Persuasive copy that speaks to pain points, highlights benefits, and compels action—turning browsers into buyers.</p>
+                <div class="content-examples">
+                    <span class="example-tag">Landing Pages</span>
+                    <span class="example-tag">Email Sequences</span>
+                    <span class="example-tag">Sales Letters</span>
+                </div>
+            </div>
+
+            <div class="content-type-card">
+                <div class="type-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Website Copy</h3>
+                <p>Clear, compelling website content that communicates your value proposition and guides visitors through the buyer journey.</p>
+                <div class="content-examples">
+                    <span class="example-tag">Homepage</span>
+                    <span class="example-tag">About Us</span>
+                    <span class="example-tag">Product Pages</span>
+                </div>
+            </div>
+
+            <div class="content-type-card">
+                <div class="type-icon">
+                    <i class="fas fa-share-alt"></i>
+                </div>
+                <h3>Social Media Content</h3>
+                <p>Engaging captions, posts, and threads that stop the scroll, spark conversation, and build community around your brand.</p>
+                <div class="content-examples">
+                    <span class="example-tag">Captions</span>
+                    <span class="example-tag">Threads</span>
+                    <span class="example-tag">Stories</span>
+                </div>
+            </div>
+
+            <div class="content-type-card">
+                <div class="type-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3>White Papers & E-books</h3>
+                <p>Authoritative long-form content that positions your brand as an industry leader and generates high-quality leads.</p>
+                <div class="content-examples">
+                    <span class="example-tag">Case Studies</span>
+                    <span class="example-tag">Research Reports</span>
+                    <span class="example-tag">E-books</span>
+                </div>
+            </div>
+
+            <div class="content-type-card">
+                <div class="type-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3>Video Scripts & Podcasts</h3>
+                <p>Compelling scripts that translate your message into engaging audio and video content that resonates with modern audiences.</p>
+                <div class="content-examples">
+                    <span class="example-tag">YouTube Scripts</span>
+                    <span class="example-tag">Podcast Outlines</span>
+                    <span class="example-tag">Webinars</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section style="background: rgba(255, 255, 255, 0.02);">
+        <div class="section-header">
+            <h2>Who We Write For</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">Our writers adapt their craft to match your industry, audience, and brand voice perfectly.</p>
+        </div>
+
+        <div class="ideal-clients">
+            <div class="client-card">
+                <h3><i class="fas fa-store"></i> E-commerce Brands</h3>
+                <p>Product descriptions that sell, category pages that convert, and email campaigns that drive repeat purchases. We understand the psychology of online shopping and craft copy that turns visitors into customers.</p>
+            </div>
+
+            <div class="client-card">
+                <h3><i class="fas fa-building"></i> B2B Companies</h3>
+                <p>Thought leadership content, white papers, and sales enablement materials that establish credibility and shorten sales cycles. We speak the language of decision-makers.</p>
+            </div>
+
+            <div class="client-card">
+                <h3><i class="fas fa-heartbeat"></i> Healthcare & Wellness</h3>
+                <p>Clear, empathetic content that simplifies complex medical information while maintaining accuracy. We balance patient education with regulatory compliance.</p>
+            </div>
+
+            <div class="client-card">
+                <h3><i class="fas fa-chart-line"></i> Tech & SaaS</h3>
+                <p>Technical content that's accessible to non-technical audiences. Feature explanations, documentation, and marketing copy that highlights innovation without jargon overload.</p>
+            </div>
+
+            <div class="client-card">
+                <h3><i class="fas fa-home"></i> Real Estate</h3>
+                <p>Property descriptions that paint a picture, neighborhood guides that sell lifestyles, and blogs that position agents as local experts. Every word drives inquiries.</p>
+            </div>
+
+            <div class="client-card">
+                <h3><i class="fas fa-graduation-cap"></i> Education & Training</h3>
+                <p>Course descriptions, curriculum content, and educational materials that engage learners and communicate value. We make learning irresistible.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process -->
+    <section>
+        <div class="section-header">
+            <h2>Our Content Creation Process</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">A systematic approach that ensures every piece of content aligns with your brand, resonates with your audience, and achieves your goals.</p>
+        </div>
+
+        <div class="approach-grid">
+            <div class="approach-item">
+                <div class="approach-number">01</div>
+                <h3>Deep Discovery</h3>
+                <p>We immerse ourselves in your brand, study your audience, analyze competitors, and identify content opportunities that will move the needle.</p>
+            </div>
+
+            <div class="approach-item">
+                <div class="approach-number">02</div>
+                <h3>Strategic Planning</h3>
+                <p>Every piece starts with strategy. We outline topics, keywords, structure, and CTAs before a single word is written—ensuring content serves your business objectives.</p>
+            </div>
+
+            <div class="approach-item">
+                <div class="approach-number">03</div>
+                <h3>Expert Creation</h3>
+                <p>Our writers craft compelling, original content that captures your brand voice while incorporating SEO best practices and conversion optimization principles.</p>
+            </div>
+        </div>
+
+        <div class="deliverables-showcase">
+            <div class="section-header" style="margin-bottom: 0;">
+                <h3 style="font-size: 2rem;">What You Get with Every Project</h3>
+                <p class="subtitle">We deliver more than just words—you get complete, ready-to-publish content assets.</p>
+            </div>
+
+            <div class="deliverables-list">
+                <div class="deliverable-item">
+                    <div class="deliverable-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="deliverable-content">
+                        <h4>SEO Optimization</h4>
+                        <p>Keyword research, strategic placement, meta descriptions, and internal linking built into every piece.</p>
+                    </div>
+                </div>
+
+                <div class="deliverable-item">
+                    <div class="deliverable-icon">
+                        <i class="fas fa-spell-check"></i>
+                    </div>
+                    <div class="deliverable-content">
+                        <h4>Error-Free Copy</h4>
+                        <p>Multiple rounds of editing and proofreading ensure flawless grammar, spelling, and punctuation.</p>
+                    </div>
+                </div>
+
+                <div class="deliverable-item">
+                    <div class="deliverable-icon">
+                        <i class="fas fa-clone"></i>
+                    </div>
+                    <div class="deliverable-content">
+                        <h4>Plagiarism Check</h4>
+                        <p>100% original content verified through professional plagiarism detection tools.</p>
+                    </div>
+                </div>
+
+                <div class="deliverable-item">
+                    <div class="deliverable-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="deliverable-content">
+                        <h4>Brand Voice Alignment</h4>
+                        <p>Content that sounds authentically like your brand—whether professional, playful, or somewhere in between.</p>
+                    </div>
+                </div>
+
+                <div class="deliverable-item">
+                    <div class="deliverable-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <div class="deliverable-content">
+                        <h4>Image Suggestions</h4>
+                        <p>Recommendations for visuals, graphics, and multimedia to enhance your content's impact.</p>
+                    </div>
+                </div>
+
+                <div class="deliverable-item">
+                    <div class="deliverable-icon">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                    <div class="deliverable-content">
+                        <h4>Revision Rounds</h4>
+                        <p>Unlimited revisions until the content meets your exact standards and expectations.</p>
+                    </div>
+                </div>
+
+                <div class="deliverable-item">
+                    <div class="deliverable-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="deliverable-content">
+                        <h4>Performance Insights</h4>
+                        <p>Readability scores, estimated engagement metrics, and optimization recommendations.</p>
+                    </div>
+                </div>
+
+                <div class="deliverable-item">
+                    <div class="deliverable-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="deliverable-content">
+                        <h4>Fast Turnaround</h4>
+                        <p>Consistent delivery schedules with room for rush projects when you need content yesterday.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Writing Preview -->
+    <section style="background: rgba(255, 255, 255, 0.02);">
+        <div class="section-header">
+            <h2>See the Difference Quality Writing Makes</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">Here's a glimpse of how we transform ideas into compelling content that engages and converts.</p>
+        </div>
+
+        <div class="samples-preview">
+            <div class="sample-card">
+                <div class="sample-content">
+                    <span class="sample-type">SaaS Landing Page Example</span>
+                    <p class="sample-text">
+                        "Tired of juggling five different tools just to manage your team? There's a better way. StreamFlow brings everything together—project management, time tracking, team communication, and reporting—in one intuitive platform. No more context-switching. No more data silos. Just pure productivity. Join 10,000+ teams who've reclaimed an average of 12 hours per week. Your free trial starts in 60 seconds."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Services -->
+    <section>
+        <div class="section-header">
+            <h2>Amplify Your Content Strategy</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">Combine our writing services with these complementary offerings for maximum impact.</p>
+        </div>
+
+        <div class="related-services">
+            <a href="#" class="service-link">
+                <i class="fas fa-search"></i>
+                <h4>SEO Keywords</h4>
+                <p>Pre-researched keyword sets that our writers can integrate into your content for optimal search visibility</p>
+            </a>
+            <a href="#" class="service-link">
+                <i class="fas fa-hashtag"></i>
+                <h4>Hashtag Sets</h4>
+                <p>Converting hashtag collections to boost your content's reach across social platforms</p>
+            </a>
+            <a href="#" class="service-link">
+                <i class="fas fa-share-alt"></i>
+                <h4>Social Media Managers</h4>
+                <p>Expert managers who can distribute and promote your content across all channels</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section style="background: rgba(255, 255, 255, 0.02);">
+        <div class="section-header">
+            <h2>Why Brands Choose Our Writers</h2>
+            <div class="orange-line"></div>
+        </div>
+
+        <div class="ideal-clients">
+            <div class="client-card">
+                <h3><i class="fas fa-graduation-cap"></i> Industry Expertise</h3>
+                <p>Our writers have specialized knowledge across industries. We match you with writers who understand your market, audience, and competition intimately.</p>
+            </div>
+
+            <div class="client-card">
+                <h3><i class="fas fa-rocket"></i> Fast Without Sacrifice</h3>
+                <p>Quick turnarounds don't mean rushed work. Our streamlined process and experienced team deliver quality content on tight deadlines.</p>
+            </div>
+
+            <div class="client-card">
+                <h3><i class="fas fa-chart-line"></i> Data-Driven Approach</h3>
+                <p>Every word serves a purpose. We use analytics, A/B testing insights, and conversion optimization principles to craft content that performs.</p>
+            </div>
+
+            <div class="client-card">
+                <h3><i class="fas fa-infinity"></i> Unlimited Revisions</h3>
+                <p>We're not satisfied until you are. Request as many revisions as needed—we'll refine the content until it's absolutely perfect.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section>
+        <div class="final-cta">
+            <h2>Ready to Elevate Your Content?</h2>
+            <p>Stop settling for mediocre content that gets ignored. Let's create words that captivate, persuade, and convert your ideal customers.</p>
+            <a href="#contact" class="cta-btn"><span>Get Your Free Content Strategy Session</span></a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Animate elements on scroll
+        document.querySelectorAll('.content-type-card, .client-card, .approach-item, .deliverable-item, .service-link').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Typewriter effect for demo text
+        const demoTexts = document.querySelectorAll('.demo-text');
+        demoTexts.forEach((demo, index) => {
+            const originalText = demo.textContent.trim();
+            const cursor = demo.querySelector('.typing-cursor');
+            demo.textContent = '';
+            demo.appendChild(cursor);
+            
+            let charIndex = 0;
+            const typeSpeed = 30;
+            
+            setTimeout(() => {
+                const typeWriter = () => {
+                    if (charIndex < originalText.length) {
+                        demo.insertBefore(document.createTextNode(originalText.charAt(charIndex)), cursor);
+                        charIndex++;
+                        setTimeout(typeWriter, typeSpeed);
+                    }
+                };
+                typeWriter();
+            }, index * 2000);
+        });
+    </script>
+</body>
+</html>

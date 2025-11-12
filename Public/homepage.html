@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevated by Decimal - Digital Marketing & Technology Agency</title>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="../assets/logo/logo-hed.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <img src="/assets/logo/logo.png" alt="Elevated by Decimal">
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="./elevated-about-page.html">About</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="/Public/elevated-blog-page.html">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="theme-toggle" onclick="toggleTheme()">
+                    <div class="theme-toggle-slider">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </div>
+                <a href="./elevated-signin-page.html" class="cta-btn" id="ctaBtn">Get Started</a>
+                <div class="mobile-toggle" id="toggleMobileMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Background Video -->
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-futuristic-dashboard-44.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Elevating African Brands Through Technology & Marketing</h1>
+                <h2>Empowering businesses to build, launch and scale their digital presence with data-driven strategies and cutting-edge solutions.</h2>
+                
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Start Your Project</a>
+                    <a href="#services" class="btn-secondary">Explore Services</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="500">0</span>+
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="200">0</span>+
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="98">0</span>%
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <img src="/assets/Marketing-bro.png" alt="Digital Marketing" class="hero-image">
+                
+                <div class="floating-card card-1">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-chart-line" style="color: var(--orange); font-size: 1.5rem;"></i>
+                        <div>
+                            <strong style="color: var(--orange);">+250%</strong>
+                            <p style="margin: 0; font-size: 0.85rem; opacity: 0.7;">ROI Growth</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="floating-card card-2">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-users" style="color: var(--orange); font-size: 1.5rem;"></i>
+                        <div>
+                            <strong style="color: var(--orange);">10K+</strong>
+                            <p style="margin: 0; font-size: 0.85rem; opacity: 0.7;">Reach Boost</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Section -->
+    <section class="clients-section">
+        <p class="clients-title">Trusted by Leading Brands Across Africa</p>
+        <div class="clients-logos">
+            <!-- Placeholder for client logos - replace with actual logos -->
+            <div style="width: 120px; height: 40px; background: #ccc; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; opacity: 0.5;">Client 1</div>
+            <div style="width: 120px; height: 40px; background: #ccc; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; opacity: 0.5;">Client 2</div>
+            <div style="width: 120px; height: 40px; background: #ccc; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; opacity: 0.5;">Client 3</div>
+            <div style="width: 120px; height: 40px; background: #ccc; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; opacity: 0.5;">Client 4</div>
+            <div style="width: 120px; height: 40px; background: #ccc; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; opacity: 0.5;">Client 5</div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="section-header">
+            <h2>Services We Provide</h2>
+            <div class="orange-line"></div>
+            <p>Comprehensive digital solutions that drive growth, engagement, and results for your brand.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-search-dollar"></i>
+                </div>
+                <h3>Digital Marketing & SEO</h3>
+                <p>Boost visibility and engagement through smart, data-driven strategies that put your brand in front of the right audience.</p>
+                <a href="/Public/services/seo-keywords.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Web Design & Development</h3>
+                <p>Build responsive, user-focused websites that drive real results with cutting-edge technology and beautiful design.</p>
+                <a href="/Public/services/web-developers.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3>Content & Campaign Management</h3>
+                <p>Run social and ad campaigns that connect and convert audiences with compelling content and strategic execution.</p>
+                <a href="/Public/services/content-strategies.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>Brand Strategy & Identity</h3>
+                <p>Craft a strong presence with creative storytelling and design that resonates with your target market.</p>
+                <a href="/Public/services/creative-designers.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="section-header">
+            <h2>How We Work</h2>
+            <div class="orange-line"></div>
+            <p>Our proven process is simple, transparent, and designed to elevate your brand digitally.</p>
+        </div>
+
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h4>Contact Us</h4>
+                <p>We start by understanding your brand's goals and challenges through a discovery call.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h4>Consult & Plan</h4>
+                <p>Our experts develop a data-driven strategy tailored to your objectives.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h4>Design & Develop</h4>
+                <p>We craft responsive websites, branding, and campaigns that showcase your presence.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h4>Launch & Elevate</h4>
+                <p>We execute your project and optimize results to ensure long-term growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="section-header">
+            <h2>What Our Clients Say</h2>
+            <div class="orange-line"></div>
+            <p>Discover how Elevated by Decimal has helped brands grow, scale, and dominate the digital space.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">Since working with Elevated by Decimal, my online visibility has skyrocketed! Their creative marketing and design approach truly transformed my brand.</p>
+                <div class="testimonial-author">
+                    <div class="author-photo">SJ</div>
+                    <div class="author-info">
+                        <h5>Sarah Johnson</h5>
+                        <p>Small Business Owner</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-text">They combined strategy with creativity — our new website is both beautiful and high-performing. Their communication was top-notch throughout.</p>
+                <div class="testimonial-author">
+                    <div class="author-photo">DP</div>
+                    <div class="author-info">
+                        <h5>David Patel</h5>
+                        <p>Project Manager</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-text">The team's professionalism and attention to detail blew us away. We saw results faster than expected. Highly recommend Elevated by Decimal!</p>
+                <div class="testimonial-author">
+                    <div class="author-photo">EC</div>
+                    <div class="author-info">
+                        <h5>Emily Carter</h5>
+                        <p>Operations Manager</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Counter Section -->
+    <section class="stats-section">
+        <div class="section-header" style="color: white;">
+            <h2 style="color: white;">Our Impact in Numbers</h2>
+            <div class="orange-line" style="background: white;"></div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <h3><span class="counter" data-count="500">0</span>+</h3>
+                <p>Projects Delivered</p>
+            </div>
+            <div class="stat-box">
+                <h3><span class="counter" data-count="200">0</span>+</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-box">
+                <h3><span class="counter" data-count="15">0</span>+</h3>
+                <p>Countries Served</p>
+            </div>
+            <div class="stat-box">
+                <h3><span class="counter" data-count="98">0</span>%</h3>
+                <p>Client Satisfaction</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="cta-box">
+            <h2>Ready to Elevate Your Brand?</h2>
+            <p>Let's transform your digital presence together. Start your journey with a free strategy session.</p>
+            <a href="./service_request_page.html" class="btn-primary">Get Started Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Elevated by Decimal</h3>
+                <p>Empowering African brands to elevate through technology, marketing, and innovation.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1a2PFjNooH/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/elevatedbydcm?s=21"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/elevated-by-decimal/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/elevatedbydecimal?igsh=MWtoYmF2OW5ueHVjeA%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@elevatedbydecimal?_r=1&_t=ZS-91J3sGI60wM"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="./elevated-about-page.html">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="./elevated-contact-page (1).html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/Public/services/creative-designers.html">Digital Marketing</a></li>
+                    <li><a href="/Public/services/web-developers.html">Web Development</a></li>
+                    <li><a href="/Public/services/seo-keywords.html">SEO Services</a></li>
+                    <li><a href="/Public/services/content-writers.html">Content Writing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="./elevated-blog-page.html">Blog</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Elevated by Decimal. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!--Menu Overlay-->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <script src="/Public/nav_footer_js.js"></script>
+    <script>
+        // Counter Animation
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-count'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    element.textContent = Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            };
+
+            updateCounter();
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('counter') || entry.target.classList.contains('stat-number')) {
+                        animateCounter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                    
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.counter, .stat-number').forEach(el => observer.observe(el));
+        document.querySelectorAll('.service-card, .process-step, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Video fallback
+        const video = document.querySelector('.hero-video');
+        if (video) {
+            video.addEventListener('error', function() {
+                this.style.display = 'none';
+            });
+        }
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImage = document.querySelector('.hero-image');
+            if (heroImage) {
+                heroImage.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+        });
+
+        console.log('✅ Homepage-specific scripts loaded');
+    </script>
+</body>
+</html>

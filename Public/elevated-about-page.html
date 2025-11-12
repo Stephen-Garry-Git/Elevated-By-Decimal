@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Elevated by Decimal</title>
+
+    <link rel="stylesheet" href="/Public/nav_footer_css.css">
+    <link rel="shortcut icon" href="/assets/logo/logo-hed.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --orange: #FF6600;
+            --black: #1C1C1C;
+            --mate: #0f0f0f;
+            --white: #FFFFFF;
+            --offwhite: #f1bfb8;
+            --off: rgba(255, 102, 0, 0.4);
+            --dark-gray: #1a1a1a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--mate);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding-top: 100px;
+            background: linear-gradient(135deg, var(--mate) 0%, #1a1a1a 100%);
+        }
+
+        .hero-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--orange);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: particleFloat 15s infinite;
+        }
+
+        @keyframes particleFloat {
+            0%, 100% {
+                transform: translate(0, 0);
+                opacity: 0;
+            }
+            10%, 90% {
+                opacity: 0.3;
+            }
+            50% {
+                transform: translate(100px, -100px);
+                opacity: 0.6;
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            padding: 0 8%;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, var(--white), var(--offwhite));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.4rem;
+            color: var(--orange);
+            margin-bottom: 20px;
+            font-weight: 600;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        /* Story Section */
+        .story-section {
+            padding: 120px 8%;
+            background: var(--mate);
+            position: relative;
+        }
+
+        .story-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .story-text h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: var(--white);
+        }
+
+        .story-text .highlight {
+            color: var(--orange);
+        }
+
+        .story-text p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 25px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .story-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .story-stat {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid var(--orange);
+            transition: all 0.3s ease;
+        }
+
+        .story-stat:hover {
+            background: rgba(255, 102, 0, 0.1);
+            transform: translateX(10px);
+        }
+
+        .story-stat h3 {
+            font-size: 2.5rem;
+            color: var(--orange);
+            margin-bottom: 8px;
+        }
+
+        .story-stat p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+        }
+
+        .story-visual {
+            position: relative;
+        }
+
+        .story-image {
+            width: 100%;
+            height: auto;
+            border-radius: 25px;
+            box-shadow: 0 25px 60px rgba(255, 102, 0, 0.3);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-25px);
+            }
+        }
+
+        .glow-effect {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--off), transparent 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+        }
+
+        /* Mission, Vision, Values */
+        .mvv-section {
+            padding: 120px 8%;
+            background: linear-gradient(135deg, #1a1a1a 0%, var(--mate) 100%);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .orange-line {
+            width: 80px;
+            height: 4px;
+            background: var(--orange);
+            margin: 20px auto;
+        }
+
+        .mvv-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .mvv-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 25px;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mvv-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--orange), #ff8c3a);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .mvv-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .mvv-card:hover {
+            background: rgba(255, 102, 0, 0.08);
+            transform: translateY(-15px);
+            box-shadow: 0 30px 70px rgba(255, 102, 0, 0.3);
+        }
+
+        .mvv-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 35px;
+            font-size: 3rem;
+            color: white;
+            box-shadow: 0 20px 50px rgba(255, 102, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .mvv-card:hover .mvv-icon {
+            transform: rotateY(360deg);
+        }
+
+        .mvv-card h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .mvv-card p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 120px 8%;
+            background: var(--mate);
+        }
+
+        /* Founders */
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto 100px;
+        }
+
+        .founder-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border-radius: 30px;
+            padding: 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .founder-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 400px;
+            height: 400px;
+            background: var(--off);
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .founder-card:hover::before {
+            opacity: 0.3;
+        }
+
+        .founder-card:hover {
+            border-color: var(--orange);
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(255, 102, 0, 0.3);
+        }
+
+        .founder-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            font-weight: 900;
+            color: white;
+            box-shadow: 0 25px 60px rgba(255, 102, 0, 0.5);
+            border: 6px solid var(--mate);
+            position: relative;
+            z-index: 1;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 25px 60px rgba(255, 102, 0, 0.5);
+            }
+            50% {
+                box-shadow: 0 25px 80px rgba(255, 102, 0, 0.8);
+            }
+        }
+
+        .founder-card h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+
+        .founder-role {
+            color: var(--orange);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .founder-bio {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .founder-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .founder-social a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .founder-social a:hover {
+            background: var(--orange);
+            transform: translateY(-3px);
+            border-color: var(--orange);
+        }
+
+        /* Team Members */
+        .team-header {
+            text-align: center;
+            margin: 100px 0 60px;
+        }
+
+        .team-header h3 {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .team-header p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .team-member {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .team-member:hover {
+            background: rgba(255, 102, 0, 0.1);
+            transform: translateY(-10px);
+            border-color: var(--orange);
+        }
+
+        .member-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255, 102, 0, 0.3), rgba(255, 140, 58, 0.3));
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--orange);
+            border: 3px solid var(--orange);
+        }
+
+        .team-member h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--white);
+        }
+
+        .member-position {
+            font-size: 0.9rem;
+            color: var(--orange);
+            margin-bottom: 12px;
+        }
+
+        .member-bio {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 120px 8%;
+            background: linear-gradient(135deg, #1a1a1a 0%, var(--mate) 100%);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .value-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 5px solid var(--orange);
+            padding: 40px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .value-item:hover {
+            background: rgba(255, 102, 0, 0.1);
+            transform: translateX(15px);
+        }
+
+        .value-item h4 {
+            font-size: 1.8rem;
+            color: var(--orange);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .value-item h4 i {
+            font-size: 2rem;
+        }
+
+        .value-item p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 120px 8%;
+            background: var(--mate);
+            text-align: center;
+        }
+
+        .cta-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            border-radius: 30px;
+            padding: 80px 60px;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+
+        .cta-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .cta-box > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-box h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-box p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .cta-box .btn-primary {
+            padding: 18px 45px;
+            background: white;
+            color: var(--orange);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-box .btn-primary:hover {
+            background: var(--mate);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        
+
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 10px 30px rgba(255, 102, 0, 0.4);
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .story-container {
+                grid-template-columns: 1fr;
+            }
+
+            .founders-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 968px) {
+            
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .mvv-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .story-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-box h2 {
+                font-size: 2rem;
+            }
+
+            .cta-box {
+                padding: 50px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <img src="/assets/logo/logo.png" alt="Elevated by Decimal">
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/Public/homepage.html#home">Home</a></li>
+                <li><a href="/Public/homepage.html#services">Services</a></li>
+                <li><a href="./elevated-about-page.html">About</a></li>
+                <li><a href="/Public/homepage.html#testimonials">Testimonials</a></li>
+                <li><a href="/Public/elevated-blog-page.html">Blog</a></li>
+                <li><a href="/Public/homepage.html#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="theme-toggle" onclick="toggleTheme()">
+                    <div class="theme-toggle-slider">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </div>
+                <a href="./elevated-signin-page.html" class="cta-btn" id="ctaBtn">Get Started</a>
+                <div class="mobile-toggle" id="toggleMobileMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-particles">
+            <!-- Animated particles -->
+            <div class="particle" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+            <div class="particle" style="top: 30%; left: 60%; animation-delay: 2s;"></div>
+            <div class="particle" style="top: 50%; left: 80%; animation-delay: 4s;"></div>
+            <div class="particle" style="top: 70%; left: 30%; animation-delay: 6s;"></div>
+            <div class="particle" style="top: 20%; left: 90%; animation-delay: 8s;"></div>
+            <div class="particle" style="top: 80%; left: 10%; animation-delay: 10s;"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1>About Elevated by Decimal</h1>
+            <p class="subtitle">Empowering African Brands Through Innovation</p>
+            <p>We're a digital marketing and technology agency dedicated to helping businesses build, launch, and scale their online presence through creativity, data, and innovation.</p>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="story-container">
+            <div class="story-text">
+                <h2>Our <span class="highlight">Story</span></h2>
+                <p>Founded with a vision to bridge the digital divide in Africa, Elevated by Decimal emerged from a passion for technology and a commitment to empowering local businesses.</p>
+                
+                <p>We recognized that many African brands had incredible potential but lacked access to affordable, high-quality digital marketing and web development services. That's where we came in.</p>
+                
+                <p>Today, we've grown into a full-service agency serving clients across multiple countries, delivering cutting-edge solutions that drive real business growth. Our team combines technical expertise with creative excellence to transform brands and accelerate success.</p>
+
+                <div class="story-stats">
+                    <div class="story-stat">
+                        <h3>2020</h3>
+                        <p>Year Founded</p>
+                    </div>
+                    <div class="story-stat">
+                        <h3>15+</h3>
+                        <p>Countries Served</p>
+                    </div>
+                    <div class="story-stat">
+                        <h3>500+</h3>
+                        <p>Projects Delivered</p>
+                    </div>
+                    <div class="story-stat">
+                        <h3>98%</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-visual">
+                <div class="glow-effect"></div>
+                <img src="../assets/Connected world-amico.png" alt="Our Story" class="story-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission, Vision, Values -->
+    <section class="mvv-section">
+        <div class="section-header">
+            <h2>What Drives Us</h2>
+            <div class="orange-line"></div>
+            <p>Our mission, vision, and values guide everything we do</p>
+        </div>
+
+        <div class="mvv-grid">
+            <div class="mvv-card">
+                <div class="mvv-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Our Mission</h3>
+                <p>To empower African brands with digital tools that help them grow, scale, and compete globally through technology, creativity, and strategy.</p>
+            </div>
+
+            <div class="mvv-card">
+                <div class="mvv-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Our Vision</h3>
+                <p>To be Africa's leading digital innovation agency, redefining how businesses connect, market, and grow in this digital era.</p>
+            </div>
+
+            <div class="mvv-card">
+                <div class="mvv-icon">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h3>Our Values</h3>
+                <p>Innovation, Integrity, Collaboration, Excellence. We build lasting impact through creativity and technology.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section" id="team">
+        <div class="section-header">
+            <h2>Meet Our Leadership</h2>
+            <div class="orange-line"></div>
+            <p>The visionaries behind Elevated by Decimal</p>
+        </div>
+
+        <!-- Founders -->
+        <div class="founders-grid">
+            <div class="founder-card">
+                <div class="founder-photo">GS</div>
+                <h3>Garry Stephen</h3>
+                <p class="founder-role">Co-Founder & Lead Developer</p>
+                <p class="founder-bio">A tech enthusiast and full-stack developer with over 8 years of experience building scalable web applications. Garry is passionate about leveraging technology to solve real-world business problems and has led development on over 200 successful projects.</p>
+                <div class="founder-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="founder-card">
+                <div class="founder-photo">OA</div>
+                <h3>Oluwadamilare Amos</h3>
+                <p class="founder-role">Founder & Head of Digital Marketing</p>
+                <p class="founder-bio">A strategic digital marketer with a proven track record of driving growth for brands across Africa. Dammy combines data-driven insights with creative campaigns to deliver exceptional ROI. His expertise spans SEO, paid advertising, and brand strategy.</p>
+                <div class="founder-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Members -->
+        <div class="team-header">
+            <h3>Our Amazing Team</h3>
+            <p>The talented individuals who make the magic happen</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-photo">AO</div>
+                <h4>Adewale Okonkwo</h4>
+                <p class="member-position">Senior Web Developer</p>
+                <p class="member-bio">Expert in React, Node.js, and cloud architecture. 5+ years experience.</p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-photo">CN</div>
+                <h4>Chioma Nwosu</h4>
+                <p class="member-position">UX/UI Designer</p>
+                <p class="member-bio">Creates stunning interfaces that users love. Award-winning designer.</p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-photo">KM</div>
+                <h4>Kofi Mensah</h4>
+                <p class="member-position">SEO Specialist</p>
+                <p class="member-bio">Drives organic traffic and rankings. 200+ successful campaigns.</p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-photo">ZA</div>
+                <h4>Zainab Abdullahi</h4>
+                <p class="member-position">Content Strategist</p>
+                <p class="member-bio">Crafts compelling content that converts. Storyteller at heart.</p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-photo">TK</div>
+                <h4>Tunde Kayode</h4>
+                <p class="member-position">Social Media Manager</p>
+                <p class="member-bio">Builds engaged communities and viral campaigns.</p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-photo">LN</div>
+                <h4>Latoya Ngugi</h4>
+                <p class="member-position">Graphic Designer</p>
+                <p class="member-bio">Visual artist who brings brands to life through design.</p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-photo">EB</div>
+                <h4>Emmanuel Boateng</h4>
+                <p class="member-position">DevOps Engineer</p>
+                <p class="member-bio">Ensures seamless deployment and infrastructure management.</p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-photo">FA</div>
+                <h4>Fatima Ahmed</h4>
+                <p class="member-position">Project Manager</p>
+                <p class="member-bio">Keeps projects on track and clients happy. Organized expert.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="values-section">
+        <div class="section-header">
+            <h2>Our Core Values</h2>
+            <div class="orange-line"></div>
+            <p>The principles that guide our work and relationships</p>
+        </div>
+
+        <div class="values-grid">
+            <div class="value-item">
+                <h4><i class="fas fa-lightbulb"></i> Innovation</h4>
+                <p>We constantly push boundaries and embrace new technologies to deliver cutting-edge solutions that give our clients a competitive advantage in the digital space.</p>
+            </div>
+
+            <div class="value-item">
+                <h4><i class="fas fa-handshake"></i> Integrity</h4>
+                <p>Transparency, honesty, and ethical practices are at the core of everything we do. We build trust through consistent delivery and open communication.</p>
+            </div>
+
+            <div class="value-item">
+                <h4><i class="fas fa-users"></i> Collaboration</h4>
+                <p>We believe the best results come from working together. We partner closely with clients and team members to achieve shared goals and mutual success.</p>
+            </div>
+
+            <div class="value-item">
+                <h4><i class="fas fa-trophy"></i> Excellence</h4>
+                <p>We're committed to delivering exceptional quality in every project. Our attention to detail and dedication to continuous improvement set us apart.</p>
+            </div>
+
+            <div class="value-item">
+                <h4><i class="fas fa-chart-line"></i> Growth-Focused</h4>
+                <p>Your growth is our success. We measure our achievements by the tangible results we deliver for your business—increased traffic, conversions, and revenue.</p>
+            </div>
+
+            <div class="value-item">
+                <h4><i class="fas fa-heart"></i> Client-Centric</h4>
+                <p>Your success is our priority. We listen, understand your unique challenges, and craft personalized solutions that align with your business objectives.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-box">
+            <h2>Ready to Work With Us?</h2>
+            <p>Join hundreds of businesses that have elevated their brands with our expertise. Let's create something amazing together.</p>
+            <a href="/Public/service_request_page.html" class="btn-primary">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Elevated by Decimal</h3>
+                <p>Empowering African brands to elevate through technology, marketing, and innovation.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1a2PFjNooH/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/elevatedbydcm?s=21"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/elevated-by-decimal/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/elevatedbydecimal?igsh=MWtoYmF2OW5ueHVjeA%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@elevatedbydecimal?_r=1&_t=ZS-91J3sGI60wM"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="./elevated-about-page.html">About</a></li>
+                    <li><a href="/Public/homepage.html#services">Services</a></li>
+                    <li><a href="/Public/homepage.html#testimonials">Testimonials</a></li>
+                    <li><a href="./elevated-contact-page (1).html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/Public/services/creative-designers.html">Digital Marketing</a></li>
+                    <li><a href="/Public/services/web-developers.html">Web Development</a></li>
+                    <li><a href="/Public/services/seo-keywords.html">SEO Services</a></li>
+                    <li><a href="/Public/services/content-writers.html">Content Writing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="./elevated-blog-page.html">Blog</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Elevated by Decimal. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <div class="scroll-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!--Menu Overlay-->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+
+    <script src="/Public/nav_footer_js.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll to Top
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.querySelector('.scroll-top');
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('show');
+            } else {
+                scrollTop.classList.remove('show');
+            }
+
+            // Navbar shadow on scroll
+            const navbar = document.querySelector('.navbar');
+            if (window.pageYOffset > 100) {
+                navbar.style.boxShadow = '0 4px 30px rgba(255, 102, 0, 0.3)';
+            } else {
+                navbar.style.boxShadow = '0 2px 20px rgba(255, 102, 0, 0.2)';
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.mvv-card, .founder-card, .team-member, .value-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+        });
+
+        // Random particle positions
+        const particles = document.querySelectorAll('.particle');
+        particles.forEach((particle, index) => {
+            const randomTop = Math.random() * 100;
+            const randomLeft = Math.random() * 100;
+            const randomDelay = Math.random() * 15;
+            
+            particle.style.top = `${randomTop}%`;
+            particle.style.left = `${randomLeft}%`;
+            particle.style.animationDelay = `${randomDelay}s`;
+        });
+
+        // Update year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Founder card hover effect
+        const founderCards = document.querySelectorAll('.founder-card');
+        founderCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 20;
+                const rotateY = (centerX - x) / 20;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+            });
+        });
+
+        // Team member hover animation
+        const teamMembers = document.querySelectorAll('.team-member');
+        teamMembers.forEach(member => {
+            member.addEventListener('mouseenter', function() {
+                const photo = this.querySelector('.member-photo');
+                photo.style.transform = 'scale(1.1) rotate(5deg)';
+            });
+            
+            member.addEventListener('mouseleave', function() {
+                const photo = this.querySelector('.member-photo');
+                photo.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+
+        // Add stagger animation to team grid
+        window.addEventListener('load', () => {
+            const teamMembers = document.querySelectorAll('.team-member');
+            teamMembers.forEach((member, index) => {
+                setTimeout(() => {
+                    member.style.opacity = '1';
+                    member.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+
+        // Stats counter animation
+        function animateValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                element.textContent = value;
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Trigger stats animation on scroll
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const stat = entry.target;
+                    const target = parseInt(stat.textContent);
+                    animateValue(stat, 0, target, 2000);
+                    statsObserver.unobserve(stat);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.story-stat h3').forEach(stat => {
+            statsObserver.observe(stat);
+        });
+
+        console.log('Elevated by Decimal - About Page Loaded Successfully');
+        console.log('Team: ' + teamMembers.length + ' members initialized');
+    </script>
+</body>
+</html>
+                

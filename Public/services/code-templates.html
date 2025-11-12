@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Templates | Elevated by Decimal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --orange: #FF6600;
+            --black: #1C1C1C;
+            --mate: #0f0f0f;
+            --white: #FFFFFF;
+            --offwhite: #f1bfb8;
+            --off: rgba(255, 102, 0, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--mate);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--mate);
+            overflow: hidden;
+            padding: 120px 20px 80px;
+        }
+
+        .code-rain {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0.08;
+        }
+
+        .code-column {
+            position: absolute;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: var(--orange);
+            white-space: pre;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100vh); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-text {
+            padding-right: 20px;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, var(--white) 0%, var(--offwhite) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text .highlight {
+            color: var(--orange);
+            -webkit-text-fill-color: var(--orange);
+        }
+
+        .hero-text .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+        }
+
+        .key-features {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.05rem;
+        }
+
+        .feature-icon {
+            width: 35px;
+            height: 35px;
+            background: var(--orange);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-icon i {
+            font-size: 1rem;
+            color: var(--white);
+        }
+
+        .hero-visual {
+            position: relative;
+            height: 500px;
+        }
+
+        .template-preview {
+            position: absolute;
+            background: rgba(28, 28, 28, 0.95);
+            border: 2px solid rgba(255, 102, 0, 0.3);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
+        }
+
+        .template-preview:hover {
+            transform: scale(1.05);
+            border-color: var(--orange);
+        }
+
+        .preview-1 {
+            width: 320px;
+            height: 240px;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+        .preview-2 {
+            width: 300px;
+            height: 220px;
+            top: 120px;
+            right: 40px;
+            z-index: 2;
+        }
+
+        .preview-3 {
+            width: 280px;
+            height: 200px;
+            bottom: 0;
+            left: 80px;
+            z-index: 1;
+        }
+
+        .preview-header {
+            background: rgba(255, 102, 0, 0.2);
+            padding: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--orange);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .preview-content {
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--orange);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--orange);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-btn:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 102, 0, 0.5);
+        }
+
+        .cta-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 100px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .section-header .subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .orange-line {
+            width: 80px;
+            height: 4px;
+            background: var(--orange);
+            margin: 20px auto;
+        }
+
+        /* Template Showcase */
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .template-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .template-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--orange);
+            box-shadow: 0 25px 60px rgba(255, 102, 0, 0.3);
+        }
+
+        .template-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #1C1C1C 0%, #0f0f0f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--orange);
+            border-bottom: 2px solid rgba(255, 102, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .template-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 102, 0, 0.1) 50%, transparent 70%);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .template-info {
+            padding: 30px;
+        }
+
+        .template-category {
+            display: inline-block;
+            background: rgba(255, 102, 0, 0.2);
+            border: 1px solid var(--orange);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--orange);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .template-info h3 {
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+            color: var(--white);
+        }
+
+        .template-info p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .template-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .feature-tag {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .feature-tag i {
+            color: var(--orange);
+            font-size: 0.9rem;
+        }
+
+        .template-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-preview {
+            flex: 1;
+            padding: 12px 20px;
+            background: transparent;
+            border: 2px solid var(--orange);
+            color: var(--orange);
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btn-preview:hover {
+            background: rgba(255, 102, 0, 0.1);
+        }
+
+        .btn-buy {
+            flex: 1;
+            padding: 12px 20px;
+            background: var(--orange);
+            border: 2px solid var(--orange);
+            color: var(--white);
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btn-buy:hover {
+            background: #ff8c3a;
+            transform: translateY(-2px);
+        }
+
+        /* Chatbot Section */
+        .chatbot-showcase {
+            background: linear-gradient(135deg, rgba(255, 102, 0, 0.1) 0%, rgba(255, 102, 0, 0.05) 100%);
+            border: 2px solid var(--orange);
+            border-radius: 30px;
+            padding: 60px 50px;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chatbot-showcase::before {
+            content: '🤖';
+            position: absolute;
+            font-size: 15rem;
+            top: -50px;
+            right: -50px;
+            opacity: 0.05;
+        }
+
+        .chatbot-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .chatbot-info h3 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .chatbot-info p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .chatbot-capabilities {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .capability-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+
+        .capability-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--orange);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .capability-icon i {
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        .capability-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--white);
+        }
+
+        .capability-text p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+        }
+
+        .chatbot-demo {
+            background: rgba(28, 28, 28, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 500px;
+        }
+
+        .chat-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .chat-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .chat-title h4 {
+            font-size: 1.2rem;
+            color: var(--white);
+            margin-bottom: 3px;
+        }
+
+        .chat-title p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0;
+        }
+
+        .chat-messages {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .chat-message {
+            padding: 15px 18px;
+            border-radius: 15px;
+            max-width: 85%;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .chat-bot {
+            background: rgba(255, 102, 0, 0.2);
+            border: 1px solid var(--orange);
+            align-self: flex-start;
+        }
+
+        .chat-user {
+            background: rgba(255, 255, 255, 0.1);
+            align-self: flex-end;
+        }
+
+        .chat-message p {
+            font-size: 0.95rem;
+            color: var(--white);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            margin-top: 80px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 45px 35px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--orange);
+            background: rgba(255, 102, 0, 0.08);
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured::before {
+            content: 'POPULAR';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--orange);
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--orange);
+            box-shadow: 0 25px 60px rgba(255, 102, 0, 0.3);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .price {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--orange);
+            margin-bottom: 10px;
+        }
+
+        .price-period {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 30px;
+        }
+
+        .pricing-features {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .pricing-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .pricing-feature i {
+            color: var(--orange);
+            font-size: 1rem;
+        }
+
+        .pricing-feature span {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+        }
+
+        /* Benefits */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            background: rgba(255, 102, 0, 0.1);
+            border-color: var(--orange);
+            transform: translateY(-8px);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 102, 0, 0.2);
+            border: 2px solid var(--orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin: 0 auto 25px;
+            color: var(--orange);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .benefit-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            border-radius: 30px;
+            padding: 80px 60px;
+            text-align: center;
+            margin-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '</>'; 
+            position: absolute;
+            font-family: 'Courier New', monospace;
+            font-size: 18rem;
+            top: -70px;
+            right: -50px;
+            opacity: 0.1;
+        }
+
+        .final-cta > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .final-cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .cta-btn {
+            background: var(--white);
+            color: var(--orange);
+            border-color: var(--white);
+        }
+
+        .final-cta .cta-btn:hover {
+            background: var(--mate);
+            color: var(--white);
+            border-color: var(--mate);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-visual {
+                height: 400px;
+            }
+
+            .chatbot-content {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .final-cta {
+                padding: 60px 30px;
+            }
+
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="code-rain"></div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="product-badge">Digital Product</div>
+                <h1>Ship Fast, Rank Higher: <span class="highlight">PHP Code Templates</span></h1>
+                <p class="tagline">Pre-built, responsive website templates backed by clean PHP code, SEO-optimized structure, and an AI chatbot that guides you through setup—from customization to hosting.</p>
+                
+                <div class="key-features">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-check"></i></div>
+                        <span>Responsive, mobile-first design</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-check"></i></div>
+                        <span>Clean, well-documented PHP code</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-check"></i></div>
+                        <span>SEO-optimized structure out of the box</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-check"></i></div>
+                        <span>Integrated AI chatbot for setup guidance</span>
+                    </div>
+                </div>
+
+                <a href="#templates" class="cta-btn"><span>Browse Templates</span></a>
+            </div>
+
+            <div class="hero-visual">
+                <div class="template-preview preview-1">
+                    <div class="preview-header">
+                        <i class="fas fa-code"></i>
+                        Business Template
+                    </div>
+                    <div class="preview-content">
+&lt;?php include 'header.php'; ?&gt;
+&lt;section class="hero"&gt;
+  &lt;h1&gt;Professional Design&lt;/h1&gt;
+&lt;/section&gt;
+                    </div>
+                </div>
+
+                <div class="template-preview preview-2">
+                    <div class="preview-header">
+                        <i class="fas fa-shopping-cart"></i>
+                        E-commerce Template
+                    </div>
+                    <div class="preview-content">
+&lt;?php foreach($products as $p): ?&gt;
+  &lt;div class="product"&gt;
+    &lt;h3&gt;&lt;?= $p['name'] ?&gt;&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;?php endforeach; ?&gt;
+                    </div>
+                </div>
+
+                <div class="template-preview preview-3">
+                    <div class="preview-header">
+                        <i class="fas fa-blog"></i>
+                        Blog Template
+                    </div>
+                    <div class="preview-content">
+&lt;?php get_posts(); ?&gt;
+&lt;article&gt;
+  &lt;h2&gt;Latest Posts&lt;/h2&gt;
+&lt;/article&gt;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Template Showcase -->
+    <section id="templates">
+        <div class="section-header">
+            <h2>Available Templates</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">Each template is professionally crafted, fully responsive, and ready to customize for your brand.</p>
+        </div>
+
+        <div class="templates-grid">
+            <div class="template-card">
+                <div class="template-image">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="template-info">
+                    <span class="template-category">Business</span>
+                    <h3>Corporate Pro</h3>
+                    <p>Professional business template perfect for agencies, consultancies, and corporate websites. Includes service pages, team profiles, and contact forms.</p>
+                    <div class="template-features">
+                        <div class="feature-tag">
+                            <i class="fas fa-mobile-alt"></i>
+                            Responsive
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-search"></i>
+                            SEO Ready
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-tachometer-alt"></i>
+                            Fast Loading
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <a href="#" class="btn-preview">Preview</a>
+                        <a href="#pricing" class="btn-buy">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <div class="template-image">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="template-info">
+                    <span class="template-category">E-commerce</span>
+                    <h3>Shop Master</h3>
+                    <p>Complete e-commerce solution with product catalogs, shopping cart, checkout pages, and payment integration ready.</p>
+                    <div class="template-features">
+                        <div class="feature-tag">
+                            <i class="fas fa-shopping-bag"></i>
+                            Cart System
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-credit-card"></i>
+                            Payment Ready
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-box"></i>
+                            Product Pages
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <a href="#" class="btn-preview">Preview</a>
+                        <a href="#pricing" class="btn-buy">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <div class="template-image">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <div class="template-info">
+                    <span class="template-category">Portfolio</span>
+                    <h3>Creative Showcase</h3>
+                    <p>Stunning portfolio template for photographers, designers, and creative professionals. Gallery, lightbox, and case study layouts included.</p>
+                    <div class="template-features">
+                        <div class="feature-tag">
+                            <i class="fas fa-images"></i>
+                            Gallery
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-expand"></i>
+                            Lightbox
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-palette"></i>
+                            Custom Filters
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <a href="#" class="btn-preview">Preview</a>
+                        <a href="#pricing" class="btn-buy">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <div class="template-image">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <div class="template-info">
+                    <span class="template-category">Blog</span>
+                    <h3>Content Hub</h3>
+                    <p>Modern blog template with post categories, author pages, comments system, and newsletter integration for content creators.</p>
+                    <div class="template-features">
+                        <div class="feature-tag">
+                            <i class="fas fa-blog"></i>
+                            Multi-Author
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-comments"></i>
+                            Comments
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-envelope"></i>
+                            Newsletter
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <a href="#" class="btn-preview">Preview</a>
+                        <a href="#pricing" class="btn-buy">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <div class="template-image">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="template-info">
+                    <span class="template-category">Restaurant</span>
+                    <h3>Dine & Reserve</h3>
+                    <p>Restaurant template with menu display, online reservations, gallery, location map, and hours of operation.</p>
+                    <div class="template-features">
+                        <div class="feature-tag">
+                            <i class="fas fa-utensils"></i>
+                            Menu
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-calendar"></i>
+                            Reservations
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Location
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <a href="#" class="btn-preview">Preview</a>
+                        <a href="#pricing" class="btn-buy">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <div class="template-image">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="template-info">
+                    <span class="template-category">Landing Page</span>
+                    <h3>Conversion Pro</h3>
+                    <p>High-converting landing page template designed for lead generation, product launches, and marketing campaigns.</p>
+                    <div class="template-features">
+                        <div class="feature-tag">
+                            <i class="fas fa-chart-line"></i>
+                            CRO Optimized
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-mouse-pointer"></i>
+                            Strong CTAs
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-clipboard-list"></i>
+                            Lead Forms
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <a href="#" class="btn-preview">Preview</a>
+                        <a href="#pricing" class="btn-buy">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot Feature -->
+    <section style="background: rgba(255, 255, 255, 0.02);">
+        <div class="chatbot-showcase">
+            <div class="chatbot-content">
+                <div class="chatbot-info">
+                    <h3>Built-In AI Setup Assistant</h3>
+                    <p>Every template includes an intelligent chatbot that guides you through customization, hosting, and deployment. Get your site live without technical expertise.</p>
+                    
+                    <div class="chatbot-capabilities">
+                        <div class="capability-item">
+                            <div class="capability-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <div class="capability-text">
+                                <h4>Template Customization</h4>
+                                <p>Step-by-step guidance on colors, fonts, images, and content</p>
+                            </div>
+                        </div>
+
+                        <div class="capability-item">
+                            <div class="capability-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="capability-text">
+                                <h4>Hosting Instructions</h4>
+                                <p>Detailed setup for Bluehost, SiteGround, Vercel, Netlify</p>
+                            </div>
+                        </div>
+
+                        <div class="capability-item">
+                            <div class="capability-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="capability-text">
+                                <h4>Domain Connection</h4>
+                                <p>DNS configuration and custom domain setup assistance</p>
+                            </div>
+                        </div>
+
+                        <div class="capability-item">
+                            <div class="capability-icon">
+                                <i class="fas fa-wrench"></i>
+                            </div>
+                            <div class="capability-text">
+                                <h4>Troubleshooting</h4>
+                                <p>Quick fixes for common issues and error messages</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chatbot-demo">
+                    <div class="chat-header">
+                        <div class="chat-avatar">🤖</div>
+                        <div class="chat-title">
+                            <h4>Setup Assistant</h4>
+                            <p>Always here to help</p>
+                        </div>
+                    </div>
+
+                    <div class="chat-messages">
+                        <div class="chat-message chat-bot">
+                            <p>Hi! I'm your setup assistant. Need help uploading your template to Bluehost?</p>
+                        </div>
+                        <div class="chat-message chat-user">
+                            <p>Yes, how do I connect my domain?</p>
+                        </div>
+                        <div class="chat-message chat-bot">
+                            <p>I'll guide you through DNS configuration. First, log into your domain registrar...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing-section">
+        <div class="section-header">
+            <h2>Simple, Transparent Pricing</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">One-time payment. Lifetime access. No subscriptions, no hidden fees.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Single Template</h3>
+                <div class="price">$99</div>
+                <p class="price-period">One-time payment</p>
+                
+                <div class="pricing-features">
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>1 Premium Template</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>AI Chatbot Assistant</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Complete Source Code</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Documentation</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>6 Months Support</span>
+                    </div>
+                </div>
+
+                <a href="#" class="cta-btn"><span>Purchase</span></a>
+            </div>
+
+            <div class="pricing-card featured">
+                <h3>Template Bundle</h3>
+                <div class="price">$299</div>
+                <p class="price-period">One-time payment</p>
+                
+                <div class="pricing-features">
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>All 6 Templates</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>AI Chatbot Assistant</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Complete Source Code</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Premium Documentation</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>12 Months Support</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Future Templates Free</span>
+                    </div>
+                </div>
+
+                <a href="#" class="cta-btn"><span>Purchase Bundle</span></a>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Developer License</h3>
+                <div class="price">$599</div>
+                <p class="price-period">One-time payment</p>
+                
+                <div class="pricing-features">
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>All Templates</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>AI Chatbot Assistant</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Complete Source Code</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Use for Client Projects</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Lifetime Support</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Unlimited Sites</span>
+                    </div>
+                </div>
+
+                <a href="#" class="cta-btn"><span>Purchase License</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section style="background: rgba(255, 255, 255, 0.02);">
+        <div class="section-header">
+            <h2>Why Choose Our Templates</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">More than just code—you're getting a complete solution to launch your website fast.</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Launch in Hours</h3>
+                <p>Skip weeks of development. Download, customize, and deploy your site in a single day with our guided setup.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Clean PHP Code</h3>
+                <p>Well-documented, maintainable code following best practices. Easy for any developer to understand and extend.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <h3>SEO Optimized</h3>
+                <p>Built-in SEO best practices, semantic HTML, fast loading times, and mobile-first design for better rankings.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Fully Responsive</h3>
+                <p>Perfect display on every device. From phones to desktops, your site looks professional everywhere.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>AI-Powered Help</h3>
+                <p>Integrated chatbot provides instant answers to setup questions, troubleshooting, and customization guidance.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Dedicated Support</h3>
+                <p>Get help when you need it with email support, documentation, and video tutorials included with purchase.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section>
+        <div class="final-cta">
+            <h2>Ready to Launch Your Website?</h2>
+            <p>Stop starting from scratch. Get a professional, SEO-ready template with AI-powered setup assistance and go live today.</p>
+            <a href="#templates" class="cta-btn"><span>Browse All Templates</span></a>
+        </div>
+    </section>
+
+    <script>
+        // Code rain effect
+        const codeRain = document.querySelector('.code-rain');
+        const codeChars = '<?php $var echo function class public private return if else foreach array database server hosting domain DNS FTP upload download config setup install deploy launch website template responsive mobile SEO optimize performance speed security backup update maintain support documentation guide tutorial help assistance chatbot AI assistant setup wizard configuration';
+        
+        function createCodeColumn() {
+            const column = document.createElement('div');
+            column.className = 'code-column';
+            column.style.left = Math.random() * 100 + '%';
+            column.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            column.textContent = codeChars.split(' ').sort(() => Math.random() - 0.5).slice(0, 15).join('\n');
+            codeRain.appendChild(column);
+            
+            setTimeout(() => column.remove(), 5000);
+        }
+
+        setInterval(createCodeColumn, 200);
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.template-card, .benefit-card, .pricing-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Chat message animation
+        const chatMessages = document.querySelectorAll('.chat-message');
+        chatMessages.forEach((msg, index) => {
+            msg.style.opacity = '0';
+            setTimeout(() => {
+                msg.style.opacity = '1';
+            }, index * 800);
+        });
+    </script>
+</body>
+</html>

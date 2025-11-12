@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Strategies | Elevated by Decimal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --orange: #FF6600;
+            --black: #1C1C1C;
+            --mate: #0f0f0f;
+            --white: #FFFFFF;
+            --offwhite: #f1bfb8;
+            --off: rgba(255, 102, 0, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--mate);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--mate);
+            overflow: hidden;
+            padding: 120px 20px 80px;
+        }
+
+        .content-nodes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.08;
+        }
+
+        .node {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 2px solid var(--orange);
+            border-radius: 50%;
+            animation: node-pulse 4s ease-in-out infinite;
+        }
+
+        .node::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            background: var(--orange);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .node:nth-child(1) {
+            top: 15%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .node:nth-child(2) {
+            top: 25%;
+            right: 15%;
+            animation-delay: 1s;
+        }
+
+        .node:nth-child(3) {
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 2s;
+        }
+
+        .node:nth-child(4) {
+            bottom: 30%;
+            right: 25%;
+            animation-delay: 3s;
+        }
+
+        @keyframes node-pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: scale(1.3);
+                opacity: 0.6;
+            }
+        }
+
+        .connector {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--orange), transparent);
+            animation: data-flow 3s linear infinite;
+        }
+
+        @keyframes data-flow {
+            0% {
+                opacity: 0;
+                transform: scaleX(0);
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: scaleX(1);
+            }
+        }
+
+        .connector:nth-child(5) {
+            width: 300px;
+            top: 20%;
+            left: 25%;
+            transform: rotate(15deg);
+        }
+
+        .connector:nth-child(6) {
+            width: 250px;
+            bottom: 25%;
+            right: 20%;
+            transform: rotate(-20deg);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-text {
+            padding-right: 20px;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, var(--white) 0%, var(--offwhite) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text .highlight {
+            color: var(--orange);
+            -webkit-text-fill-color: var(--orange);
+        }
+
+        .hero-text .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+        }
+
+        .value-points {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .value-point {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.05rem;
+        }
+
+        .value-icon {
+            width: 35px;
+            height: 35px;
+            background: var(--orange);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .value-icon i {
+            font-size: 1rem;
+            color: var(--white);
+        }
+
+        .hero-visual {
+            position: relative;
+            height: 550px;
+        }
+
+        .strategy-document {
+            position: absolute;
+            background: rgba(28, 28, 28, 0.95);
+            border: 2px solid rgba(255, 102, 0, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
+        }
+
+        .strategy-document:hover {
+            transform: scale(1.05);
+            border-color: var(--orange);
+        }
+
+        .doc-1 {
+            width: 340px;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+        .doc-2 {
+            width: 320px;
+            top: 150px;
+            right: 0;
+            z-index: 2;
+        }
+
+        .doc-3 {
+            width: 300px;
+            bottom: 0;
+            left: 60px;
+            z-index: 1;
+        }
+
+        .doc-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 102, 0, 0.3);
+        }
+
+        .doc-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--orange);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .doc-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--orange);
+        }
+
+        .doc-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .doc-line {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        .doc-line:nth-child(1) {
+            width: 90%;
+        }
+
+        .doc-line:nth-child(2) {
+            width: 75%;
+        }
+
+        .doc-line:nth-child(3) {
+            width: 85%;
+        }
+
+        .doc-line:nth-child(4) {
+            width: 60%;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--orange);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--orange);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-btn:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 102, 0, 0.5);
+        }
+
+        .cta-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .section-header .subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .orange-line {
+            width: 80px;
+            height: 4px;
+            background: var(--orange);
+            margin: 20px auto;
+        }
+
+        /* Strategy Packages */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .package-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 50px 40px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--orange), #ff8c3a);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .package-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .package-card:hover {
+            background: rgba(255, 102, 0, 0.08);
+            border-color: var(--orange);
+            transform: translateY(-10px);
+            box-shadow: 0 30px 70px rgba(255, 102, 0, 0.2);
+        }
+
+        .package-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 40px rgba(255, 102, 0, 0.4);
+        }
+
+        .package-card h3 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            color: var(--white);
+        }
+
+        .package-duration {
+            font-size: 1rem;
+            color: var(--orange);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .package-card p {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .package-includes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .include-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .include-item i {
+            color: var(--orange);
+            font-size: 1rem;
+        }
+
+        .package-price {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--orange);
+            margin-bottom: 20px;
+        }
+
+        .btn-buy {
+            display: block;
+            width: 100%;
+            padding: 16px 20px;
+            background: var(--orange);
+            border: 2px solid var(--orange);
+            color: var(--white);
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.05rem;
+        }
+
+        .btn-buy:hover {
+            background: #ff8c3a;
+            transform: translateY(-2px);
+        }
+
+        /* What's Inside */
+        .inside-strategy {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 30px;
+            padding: 60px 50px;
+            margin-top: 60px;
+        }
+
+        .inside-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+            margin-top: 40px;
+        }
+
+        .inside-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--orange);
+            padding: 35px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .inside-item:hover {
+            background: rgba(255, 102, 0, 0.08);
+            transform: translateX(10px);
+        }
+
+        .inside-item h4 {
+            font-size: 1.5rem;
+            color: var(--orange);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .inside-item h4 i {
+            font-size: 1.8rem;
+        }
+
+        .inside-item p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+
+        /* Sample Preview */
+        .sample-showcase {
+            margin-top: 60px;
+        }
+
+        .sample-container {
+            background: linear-gradient(135deg, rgba(255, 102, 0, 0.1) 0%, rgba(255, 102, 0, 0.05) 100%);
+            border: 2px solid var(--orange);
+            border-radius: 25px;
+            padding: 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .sample-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .sample-title {
+            font-size: 1.8rem;
+            color: var(--white);
+        }
+
+        .download-sample {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 30px;
+            background: var(--orange);
+            color: var(--white);
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .download-sample:hover {
+            background: #ff8c3a;
+            transform: translateY(-2px);
+        }
+
+        .sample-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .sample-section {
+            background: rgba(28, 28, 28, 0.6);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sample-section h5 {
+            font-size: 1.2rem;
+            color: var(--orange);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sample-section ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .sample-section li {
+            color: rgba(255, 255, 255, 0.85);
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .sample-section li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--orange);
+            font-weight: bold;
+        }
+
+        /* Benefits */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            background: rgba(255, 102, 0, 0.1);
+            border-color: var(--orange);
+            transform: translateY(-8px);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 102, 0, 0.2);
+            border: 2px solid var(--orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin: 0 auto 25px;
+            color: var(--orange);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .benefit-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            border-radius: 30px;
+            padding: 80px 60px;
+            text-align: center;
+            margin-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '📋';
+            position: absolute;
+            font-size: 20rem;
+            top: -80px;
+            left: -80px;
+            opacity: 0.1;
+            transform: rotate(-20deg);
+        }
+
+        .final-cta > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .final-cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .cta-btn {
+            background: var(--white);
+            color: var(--orange);
+            border-color: var(--white);
+        }
+
+        .final-cta .cta-btn:hover {
+            background: var(--mate);
+            color: var(--white);
+            border-color: var(--mate);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-visual {
+                height: 400px;
+            }
+
+            .inside-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .final-cta {
+                padding: 60px 30px;
+            }
+
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sample-container {
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="content-nodes">
+            <div class="node"></div>
+            <div class="node"></div>
+            <div class="node"></div>
+            <div class="node"></div>
+            <div class="connector"></div>
+            <div class="connector"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="product-badge">Digital Product</div>
+                <h1>Done-For-You <span class="highlight">Content Strategies</span></h1>
+                <p class="tagline">Stop staring at blank pages. Get a complete 6-month content roadmap with topics, headlines, SEO keywords, and posting schedules—all researched and ready to execute.</p>
+                
+                <div class="value-points">
+                    <div class="value-point">
+                        <div class="value-icon"><i class="fas fa-check"></i></div>
+                        <span>20+ detailed content briefs</span>
+                    </div>
+                    <div class="value-point">
+                        <div class="value-icon"><i class="fas fa-check"></i></div>
+                        <span>6-month editorial calendar</span>
+                    </div>
+                    <div class="value-point">
+                        <div class="value-icon"><i class="fas fa-check"></i></div>
+                        <span>SEO keywords for every topic</span>
+                    </div>
+                    <div class="value-point">
+                        <div class="value-icon"><i class="fas fa-check"></i></div>
+                        <span>Content format recommendations</span>
+                    </div>
+                </div>
+
+                <a href="#packages" class="cta-btn"><span>Get Your Strategy</span></a>
+            </div>
+
+            <div class="hero-visual">
+                <div class="strategy-document doc-1">
+                    <div class="doc-header">
+                        <div class="doc-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="doc-title">Editorial Calendar</div>
+                    </div>
+                    <div class="doc-content">
+                        <div class="doc-line"></div>
+                        <div class="doc-line"></div>
+                        <div class="doc-line"></div>
+                        <div class="doc-line"></div>
+                    </div>
+                </div>
+
+                <div class="strategy-document doc-2">
+                    <div class="doc-header">
+                        <div class="doc-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="doc-title">Content Briefs</div>
+                    </div>
+                    <div class="doc-content">
+                        <div class="doc-line"></div>
+                        <div class="doc-line"></div>
+                        <div class="doc-line"></div>
+                        <div class="doc-line"></div>
+                    </div>
+                </div>
+
+                <div class="strategy-document doc-3">
+                    <div class="doc-header">
+                        <div class="doc-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="doc-title">SEO Keywords</div>
+                    </div>
+                    <div class="doc-content">
+                        <div class="doc-line"></div>
+                        <div class="doc-line"></div>
+                        <div class="doc-line"></div>
+                        <div class="doc-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Packages -->
+    <section id="packages">
+        <div class="section-header">
+            <h2>Industry-Specific Content Strategies</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">Get a comprehensive content plan tailored to your industry with topics, keywords, and execution guidance.</p>
+        </div>
+
+        <div class="packages-grid">
+            <div class="package-card">
+                <div class="package-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Tech & SaaS</h3>
+                <p class="package-duration">6-Month Strategy</p>
+                <p>Position your software as the solution with educational content, comparison guides, and thought leadership topics.</p>
+                <div class="package-includes">
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>20 detailed content briefs</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Feature comparison articles</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Integration how-to guides</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Use case studies</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Technical explainers</span>
+                    </div>
+                </div>
+                <div class="package-price">$199</div>
+                <a href="#" class="btn-buy">Purchase Strategy</a>
+            </div>
+
+            <div class="package-card">
+                <div class="package-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Real Estate</h3>
+                <p class="package-duration">6-Month Strategy</p>
+                <p>Attract buyers and sellers with neighborhood guides, market insights, and home buying/selling advice.</p>
+                <div class="package-includes">
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>20 detailed content briefs</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Neighborhood spotlight articles</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Buyer/seller guide topics</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Market trend analysis</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Investment property content</span>
+                    </div>
+                </div>
+                <div class="package-price">$199</div>
+                <a href="#" class="btn-buy">Purchase Strategy</a>
+            </div>
+
+            <div class="package-card">
+                <div class="package-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3>Health & Wellness</h3>
+                <p class="package-duration">6-Month Strategy</p>
+                <p>Build trust with educational health content, wellness tips, and patient-focused information.</p>
+                <div class="package-includes">
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>20 detailed content briefs</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Condition explainers</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Treatment option guides</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Preventive care topics</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Wellness lifestyle content</span>
+                    </div>
+                </div>
+                <div class="package-price">$199</div>
+                <a href="#" class="btn-buy">Purchase Strategy</a>
+            </div>
+
+            <div class="package-card">
+                <div class="package-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h3>E-commerce</h3>
+                <p class="package-duration">6-Month Strategy</p>
+                <p>Drive product discovery with buying guides, style tips, and product-focused educational content.</p>
+                <div class="package-includes">
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>20 detailed content briefs</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Buying guide templates</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Product comparison topics</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>How-to and tutorial ideas</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Seasonal campaign plans</span>
+                    </div>
+                </div>
+                <div class="package-price">$199</div>
+                <a href="#" class="btn-buy">Purchase Strategy</a>
+            </div>
+
+            <div class="package-card">
+                <div class="package-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Professional Services</h3>
+                <p class="package-duration">6-Month Strategy</p>
+                <p>Demonstrate expertise with insights, case studies, and client education content for service providers.</p>
+                <div class="package-includes">
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>20 detailed content briefs</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Expert insight articles</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Process explainer topics</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Client success stories</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>FAQ-based content</span>
+                    </div>
+                </div>
+                <div class="package-price">$199</div>
+                <a href="#" class="btn-buy">Purchase Strategy</a>
+            </div>
+
+            <div class="package-card">
+                <div class="package-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Restaurant & Food</h3>
+                <p class="package-duration">6-Month Strategy</p>
+                <p>Engage food lovers with recipes, chef insights, ingredient spotlights, and dining experience content.</p>
+                <div class="package-includes">
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>20 detailed content briefs</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Recipe and cooking tips</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Behind-the-scenes content</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Local ingredient stories</span>
+                    </div>
+                    <div class="include-item">
+                        <i class="fas fa-check"></i>
+                        <span>Event and promotion ideas</span>
+                    </div>
+                </div>
+                <div class="package-price">$199</div>
+                <a href="#" class="btn-buy">Purchase Strategy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside -->
+    <section style="background: rgba(255, 255, 255, 0.02);">
+        <div class="inside-strategy">
+            <div class="section-header" style="margin-bottom: 0;">
+                <h2>What's Inside Every Strategy</h2>
+                <div class="orange-line"></div>
+                <p class="subtitle">A complete content playbook that eliminates guesswork and accelerates execution.</p>
+            </div>
+
+            <div class="inside-grid">
+                <div class="inside-item">
+                    <h4><i class="fas fa-file-alt"></i> 20 Content Briefs</h4>
+                    <p>Detailed outlines for each piece including headline options, target keywords, content structure, key points to cover, and CTA recommendations. Ready to hand to writers.</p>
+                </div>
+
+                <div class="inside-item">
+                    <h4><i class="fas fa-calendar-alt"></i> Editorial Calendar</h4>
+                    <p>6-month posting schedule with optimal timing, content themes, seasonal tie-ins, and distribution channels. Know exactly what to publish and when.</p>
+                </div>
+
+                <div class="inside-item">
+                    <h4><i class="fas fa-search"></i> SEO Keywords</h4>
+                    <p>Primary and secondary keywords for every topic with search volume and difficulty data. Optimized for rankability and relevance.</p>
+                </div>
+
+                <div class="inside-item">
+                    <h4><i class="fas fa-bullseye"></i> Target Audience Insights</h4>
+                    <p>Detailed buyer persona information, pain points addressed, and stage-of-journey mapping for each content piece.</p>
+                </div>
+
+                <div class="inside-item">
+                    <h4><i class="fas fa-chart-line"></i> Content Format Mix</h4>
+                    <p>Strategic blend of blog posts, infographics, videos, guides, and interactive content to maximize engagement.</p>
+                </div>
+
+                <div class="inside-item">
+                    <h4><i class="fas fa-share-alt"></i> Distribution Strategy</h4>
+                    <p>Platform-specific promotion plans, social media angles, email newsletter integration, and repurposing opportunities.</p>
+                </div>
+
+                <div class="inside-item">
+                    <h4><i class="fas fa-link"></i> Internal Linking Map</h4>
+                    <p>Strategic recommendations for connecting content pieces to build topical authority and improve SEO performance.</p>
+                </div>
+
+                <div class="inside-item">
+                    <h4><i class="fas fa-chart-bar"></i> Success Metrics</h4>
+                    <p>KPIs to track for each content type, benchmarks to aim for, and measurement recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Preview -->
+    <section class="sample-showcase">
+        <div class="section-header">
+            <h2>Preview a Sample Strategy</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">See the level of detail and actionable guidance included in every content strategy package.</p>
+        </div>
+
+        <div class="sample-container">
+            <div class="sample-header">
+                <h3 class="sample-title">Sample: Tech SaaS Content Brief</h3>
+                <a href="#" class="download-sample">
+                    <i class="fas fa-download"></i>
+                    Download Full Sample
+                </a>
+            </div>
+
+            <div class="sample-content">
+                <div class="sample-section">
+                    <h5><i class="fas fa-heading"></i> Headline Options</h5>
+                    <ul>
+                        <li>"How to Automate Customer Onboarding in 5 Steps"</li>
+                        <li>"The Complete Guide to Customer Onboarding Automation"</li>
+                        <li>"Reduce Churn by 40%: Automated Onboarding Best Practices"</li>
+                    </ul>
+                </div>
+
+                <div class="sample-section">
+                    <h5><i class="fas fa-search"></i> Target Keywords</h5>
+                    <ul>
+                        <li>Primary: "customer onboarding automation" (1,200/mo, Medium)</li>
+                        <li>Secondary: "automated onboarding software" (800/mo, Easy)</li>
+                        <li>Long-tail: "how to automate onboarding process" (500/mo, Easy)</li>
+                    </ul>
+                </div>
+
+                <div class="sample-section">
+                    <h5><i class="fas fa-list-ol"></i> Content Outline</h5>
+                    <ul>
+                        <li>Introduction: Why manual onboarding kills growth</li>
+                        <li>Section 1: Common onboarding bottlenecks</li>
+                        <li>Section 2: 5 steps to automation (detailed breakdown)</li>
+                        <li>Section 3: Tools and platforms comparison</li>
+                        <li>Conclusion: ROI of automated onboarding + CTA</li>
+                    </ul>
+                </div>
+
+                <div class="sample-section">
+                    <h5><i class="fas fa-bullseye"></i> Target Audience</h3>
+                    <ul>
+                        <li>SaaS founders and product managers (50-500 employees)</li>
+                        <li>Pain point: High churn in first 30 days</li>
+                        <li>Journey stage: Solution-aware, evaluating options</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section style="background: rgba(255, 255, 255, 0.02);">
+        <div class="section-header">
+            <h2>Why Buy a Content Strategy?</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">Stop planning from scratch every month. Get a proven roadmap that drives results.</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Save 30+ Hours</h3>
+                <p>Skip brainstorming sessions, keyword research, and planning. Get 6 months of content mapped in minutes.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Execute Faster</h3>
+                <p>Hand detailed briefs to writers and start publishing immediately. No more writer's block or planning paralysis.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Consistent Publishing</h3>
+                <p>Maintain steady content flow with a calendar that keeps you accountable and on schedule.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <h3>SEO-Optimized</h3>
+                <p>Every topic includes researched keywords and optimization guidance for better search rankings.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Audience-Focused</h3>
+                <p>Content aligned with real customer pain points and search intent—not random topics.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Goal-Aligned</h3>
+                <p>Strategic mix of awareness, consideration, and decision-stage content that moves prospects toward conversion.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section>
+        <div class="final-cta">
+            <h2>Stop Winging Your Content. Start Executing a Strategy.</h2>
+            <p>Get a complete 6-month content roadmap with topics, keywords, outlines, and scheduling—all researched and ready to use.</p>
+            <a href="#packages" class="cta-btn"><span>Choose Your Industry Strategy</span></a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.package-card, .benefit-card, .inside-item, .sample-section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

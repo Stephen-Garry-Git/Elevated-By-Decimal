@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Ads & Paid Ads Specialists | Elevated by Decimal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --orange: #FF6600;
+            --black: #1C1C1C;
+            --mate: #0f0f0f;
+            --white: #FFFFFF;
+            --offwhite: #f1bfb8;
+            --off: rgba(255, 102, 0, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--mate);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--mate);
+            overflow: hidden;
+            padding: 120px 20px 80px;
+        }
+
+        .data-visualization {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+        }
+
+        .chart-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--orange), transparent);
+            animation: chart-animate 3s ease-in-out infinite;
+        }
+
+        .chart-line:nth-child(1) {
+            top: 20%;
+            width: 60%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .chart-line:nth-child(2) {
+            top: 40%;
+            width: 50%;
+            left: 30%;
+            animation-delay: 0.5s;
+        }
+
+        .chart-line:nth-child(3) {
+            top: 60%;
+            width: 70%;
+            left: 15%;
+            animation-delay: 1s;
+        }
+
+        .chart-line:nth-child(4) {
+            top: 80%;
+            width: 55%;
+            left: 25%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes chart-animate {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scaleX(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scaleX(1.1);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 102, 0, 0.15);
+            border: 2px solid var(--orange);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            margin-bottom: 35px;
+            font-weight: 600;
+            color: var(--orange);
+            animation: pulse-badge 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-badge {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(255, 102, 0, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 0 15px rgba(255, 102, 0, 0);
+            }
+        }
+
+        .hero-badge i {
+            font-size: 1.3rem;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, var(--white) 0%, var(--offwhite) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content .highlight {
+            color: var(--orange);
+            -webkit-text-fill-color: var(--orange);
+        }
+
+        .hero-content .tagline {
+            font-size: 1.4rem;
+            margin-bottom: 50px;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .roi-showcase {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .roi-metric {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            min-width: 200px;
+            transition: all 0.3s ease;
+        }
+
+        .roi-metric:hover {
+            background: rgba(255, 102, 0, 0.1);
+            border-color: var(--orange);
+            transform: translateY(-5px);
+        }
+
+        .roi-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--orange);
+            display: block;
+            text-shadow: 0 0 40px rgba(255, 102, 0, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .roi-label {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--orange);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--orange);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-btn:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 102, 0, 0.5);
+        }
+
+        .cta-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-secondary {
+            background: transparent;
+            border-color: var(--white);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .section-header .subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .orange-line {
+            width: 80px;
+            height: 4px;
+            background: var(--orange);
+            margin: 20px auto;
+        }
+
+        /* Platforms Grid */
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .platform-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 45px 35px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .platform-card::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            border-radius: 25px;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.4s ease;
+        }
+
+        .platform-card:hover::after {
+            opacity: 0.2;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(255, 102, 0, 0.3);
+        }
+
+        .platform-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 40px rgba(255, 102, 0, 0.4);
+        }
+
+        .platform-card h3 {
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .platform-card p {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .platform-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .feature-badge {
+            background: rgba(255, 102, 0, 0.2);
+            border: 1px solid var(--orange);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--orange);
+            font-weight: 500;
+        }
+
+        /* Campaign Types */
+        .campaign-types {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .campaign-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .campaign-card:hover {
+            background: rgba(255, 102, 0, 0.08);
+            border-color: var(--orange);
+        }
+
+        .campaign-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .campaign-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--orange);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 10px 30px rgba(255, 102, 0, 0.3);
+            flex-shrink: 0;
+        }
+
+        .campaign-card h3 {
+            font-size: 1.6rem;
+            color: var(--white);
+        }
+
+        .campaign-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .campaign-benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .benefit-item i {
+            color: var(--orange);
+            font-size: 1rem;
+        }
+
+        /* Services Breakdown */
+        .services-container {
+            margin-top: 60px;
+        }
+
+        .service-category {
+            margin-bottom: 50px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--orange);
+        }
+
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .category-header h3 {
+            font-size: 2rem;
+            color: var(--orange);
+        }
+
+        .service-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .service-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .service-item:hover {
+            background: rgba(255, 102, 0, 0.1);
+            border-color: var(--orange);
+            transform: translateX(5px);
+        }
+
+        .service-item i {
+            color: var(--orange);
+            font-size: 1.3rem;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .service-item span {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+        }
+
+        /* Process Timeline */
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: 12.5%;
+            right: 12.5%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--orange), rgba(255, 102, 0, 0.3));
+            z-index: 0;
+        }
+
+        .process-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .process-card:hover {
+            background: rgba(255, 102, 0, 0.08);
+            border-color: var(--orange);
+            transform: translateY(-10px);
+        }
+
+        .process-num {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin: 0 auto 25px;
+            box-shadow: 0 15px 40px rgba(255, 102, 0, 0.5);
+            border: 5px solid var(--mate);
+        }
+
+        .process-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .process-card p {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* Results Section */
+        .results-showcase {
+            background: linear-gradient(135deg, rgba(255, 102, 0, 0.1) 0%, rgba(255, 102, 0, 0.05) 100%);
+            border: 2px solid var(--orange);
+            border-radius: 30px;
+            padding: 60px 50px;
+            margin-top: 60px;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .result-item {
+            text-align: center;
+        }
+
+        .result-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            box-shadow: 0 10px 30px rgba(255, 102, 0, 0.5);
+        }
+
+        .result-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--orange);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .result-label {
+            font-size: 1rem;
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        /* Related Services */
+        .related-services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-link {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 35px 30px;
+            border-radius: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .service-link:hover {
+            background: rgba(255, 102, 0, 0.1);
+            border-color: var(--orange);
+            transform: translateY(-8px);
+        }
+
+        .service-link i {
+            font-size: 2.8rem;
+            color: var(--orange);
+            margin-bottom: 20px;
+        }
+
+        .service-link h4 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .service-link p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.6;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--orange), #ff8c3a);
+            border-radius: 30px;
+            padding: 80px 60px;
+            text-align: center;
+            margin-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '📊';
+            position: absolute;
+            font-size: 18rem;
+            top: -70px;
+            left: -70px;
+            opacity: 0.1;
+            transform: rotate(-20deg);
+        }
+
+        .final-cta::after {
+            content: '💰';
+            position: absolute;
+            font-size: 12rem;
+            bottom: -50px;
+            right: -50px;
+            opacity: 0.1;
+            transform: rotate(20deg);
+        }
+
+        .final-cta > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .final-cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .cta-btn {
+            background: var(--white);
+            color: var(--orange);
+            border-color: var(--white);
+        }
+
+        .final-cta .cta-btn:hover {
+            background: var(--mate);
+            color: var(--white);
+            border-color: var(--mate);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .roi-showcase {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .campaign-types {
+                grid-template-columns: 1fr;
+            }
+
+            .process-timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .process-timeline::before {
+                display: none;
+            }
+
+            .results-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .related-services {
+                grid-template-columns: 1fr;
+            }
+
+            .final-cta {
+                padding: 60px 30px;
+            }
+
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .roi-value {
+                font-size: 2.5rem;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+
+            .cta-btn {
+                width: 100%;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="data-visualization">
+            <div class="chart-line"></div>
+            <div class="chart-line"></div>
+            <div class="chart-line"></div>
+            <div class="chart-line"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-bullseye"></i>
+                <span>Performance-Driven Advertising</span>
+            </div>
+            <h1>Turn <span class="highlight">Every Click</span> Into Revenue</h1>
+            <p class="tagline">Stop wasting ad budget on campaigns that don't convert. Our Google Ads and paid advertising specialists engineer high-performing campaigns that deliver qualified leads and measurable ROI—guaranteed.</p>
+            
+            <div class="roi-showcase">
+                <div class="roi-metric">
+                    <span class="roi-value">487%</span>
+                    <span class="roi-label">Average ROAS</span>
+                </div>
+                <div class="roi-metric">
+                    <span class="roi-value">62%</span>
+                    <span class="roi-label">Cost Per Lead Reduction</span>
+                </div>
+                <div class="roi-metric">
+                    <span class="roi-value">3.8X</span>
+                    <span class="roi-label">Conversion Rate Boost</span>
+                </div>
+            </div>
+
+            <div class="cta-group">
+                <a href="#contact" class="cta-btn"><span>Get Your Free Ad Audit</span></a>
+                <a href="#process" class="cta-btn cta-secondary"><span>See Our Process</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertising Platforms -->
+    <section>
+        <div class="section-header">
+            <h2>Master Every Major Ad Platform</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">We don't just run ads—we engineer multi-channel strategies that maximize reach, minimize waste, and deliver consistent results.</p>
+        </div>
+
+        <div class="platforms-grid">
+            <div class="platform-card">
+                <div class="platform-icon">
+                    <i class="fab fa-google"></i>
+                </div>
+                <h3>Google Ads</h3>
+                <p>Dominate search results and capture high-intent buyers at the exact moment they're searching for your solution.</p>
+                <div class="platform-features">
+                    <span class="feature-badge">Search Campaigns</span>
+                    <span class="feature-badge">Display Network</span>
+                    <span class="feature-badge">Shopping Ads</span>
+                    <span class="feature-badge">Performance Max</span>
+                </div>
+            </div>
+
+            <div class="platform-card">
+                <div class="platform-icon">
+                    <i class="fab fa-facebook"></i>
+                </div>
+                <h3>Facebook & Instagram Ads</h3>
+                <p>Reach billions of users with precision targeting based on demographics, interests, and behaviors.</p>
+                <div class="platform-features">
+                    <span class="feature-badge">Feed Ads</span>
+                    <span class="feature-badge">Stories & Reels</span>
+                    <span class="feature-badge">Retargeting</span>
+                    <span class="feature-badge">Lead Gen</span>
+                </div>
+            </div>
+
+            <div class="platform-card">
+                <div class="platform-icon">
+                    <i class="fab fa-linkedin"></i>
+                </div>
+                <h3>LinkedIn Ads</h3>
+                <p>Connect with decision-makers and professionals with B2B campaigns that generate quality leads.</p>
+                <div class="platform-features">
+                    <span class="feature-badge">Sponsored Content</span>
+                    <span class="feature-badge">InMail</span>
+                    <span class="feature-badge">Text Ads</span>
+                    <span class="feature-badge">Lead Forms</span>
+                </div>
+            </div>
+
+            <div class="platform-card">
+                <div class="platform-icon">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <h3>YouTube Ads</h3>
+                <p>Capture attention with video ads that build brand awareness and drive action at scale.</p>
+                <div class="platform-features">
+                    <span class="feature-badge">Skippable Ads</span>
+                    <span class="feature-badge">Bumper Ads</span>
+                    <span class="feature-badge">Discovery Ads</span>
+                </div>
+            </div>
+
+            <div class="platform-card">
+                <div class="platform-icon">
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <h3>Twitter (X) Ads</h3>
+                <p>Engage audiences in real-time conversations and amplify your message to trending topics.</p>
+                <div class="platform-features">
+                    <span class="feature-badge">Promoted Tweets</span>
+                    <span class="feature-badge">Trend Takeover</span>
+                    <span class="feature-badge">Follower Campaigns</span>
+                </div>
+            </div>
+
+            <div class="platform-card">
+                <div class="platform-icon">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <h3>TikTok Ads</h3>
+                <p>Reach younger audiences with creative, engaging video content that drives viral growth.</p>
+                <div class="platform-features">
+                    <span class="feature-badge">In-Feed Ads</span>
+                    <span class="feature-badge">TopView</span>
+                    <span class="feature-badge">Spark Ads</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campaign Types -->
+    <section style="background: rgba(255, 255, 255, 0.02);">
+        <div class="section-header">
+            <h2>Strategic Campaign Types</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">Every campaign is custom-engineered for your specific goals, audience, and business model.</p>
+        </div>
+
+        <div class="campaign-types">
+            <div class="campaign-card">
+                <div class="campaign-header">
+                    <div class="campaign-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3>Search Campaigns</h3>
+                </div>
+                <p>Capture high-intent buyers actively searching for your products or services. We optimize for quality score, ad relevance, and conversion rate—not just clicks.</p>
+                <div class="campaign-benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Strategic keyword research and selection</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Compelling ad copy with strong CTAs</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Negative keyword optimization</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Bid strategy optimization</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="campaign-card">
+                <div class="campaign-header">
+                    <div class="campaign-icon">
+                        <i class="fas fa-ad"></i>
+                    </div>
+                    <h3>Display & Remarketing</h3>
+                </div>
+                <p>Stay top-of-mind with strategic display placements and smart remarketing that brings visitors back to convert.</p>
+                <div class="campaign-benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Custom audience segmentation</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Dynamic remarketing for e-commerce</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Banner ad design and A/B testing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Frequency capping and attribution</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="campaign-card">
+                <div class="campaign-header">
+                    <div class="campaign-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Shopping Campaigns</h3>
+                </div>
+                <p>Showcase your products with rich visuals directly in search results and drive qualified traffic to your e-commerce store.</p>
+                <div class="campaign-benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Product feed optimization</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Smart Shopping campaigns</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Product group structuring</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Merchant Center management</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="campaign-card">
+                <div class="campaign-header">
+                    <div class="campaign-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Social Media Ads</h3>
+                </div>
+                <p>Leverage social platforms' powerful targeting to reach your ideal customers where they spend their time.</p>
+                <div class="campaign-benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Lookalike audience creation</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Creative testing and optimization</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Conversion API setup</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Full-funnel campaign strategies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Deliver -->
+    <section>
+        <div class="section-header">
+            <h2>End-to-End Campaign Management</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">From strategy to optimization, we handle every aspect of your paid advertising campaigns.</p>
+        </div>
+
+        <div class="services-container">
+            <div class="service-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-chess"></i>
+                    </div>
+                    <h3>Strategy & Planning</h3>
+                </div>
+                <div class="service-items">
+                    <div class="service-item">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Goal-aligned campaign strategy development</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Budget allocation and bid strategy planning</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-users-cog"></i>
+                        <span>Audience research and persona targeting</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-route"></i>
+                        <span>Customer journey mapping</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Campaign Setup & Management</h3>
+                </div>
+                <div class="service-items">
+                    <div class="service-item">
+                        <i class="fas fa-rocket"></i>
+                        <span>Account structure and campaign architecture</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-key"></i>
+                        <span>Comprehensive keyword research</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-pen-fancy"></i>
+                        <span>Persuasive ad copy and creative development</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-sliders-h"></i>
+                        <span>Advanced targeting and segmentation</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-code"></i>
+                        <span>Conversion tracking and pixel setup</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-tag"></i>
+                        <span>Landing page recommendations</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Optimization & Testing</h3>
+                </div>
+                <div class="service-items">
+                    <div class="service-item">
+                        <i class="fas fa-vial"></i>
+                        <span>Continuous A/B testing of ads and audiences</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Daily bid adjustments and budget optimization</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-ban"></i>
+                        <span>Negative keyword refinement</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-trophy"></i>
+                        <span>Quality score improvement strategies</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Analytics & Reporting</h3>
+                </div>
+                <div class="service-items">
+                    <div class="service-item">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Weekly/monthly performance reports</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-crosshairs"></i>
+                        <span>ROI and ROAS tracking</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-chart-area"></i>
+                        <span>Attribution modeling and analysis</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Actionable insights and recommendations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" style="background: rgba(255, 255, 255, 0.02);">
+        <div class="section-header">
+            <h2>Our Battle-Tested Process</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">A proven methodology that transforms ad spend into predictable, scalable revenue.</p>
+        </div>
+
+        <div class="process-timeline">
+            <div class="process-card">
+                <div class="process-num">01</div>
+                <h3>Audit & Analysis</h3>
+                <p>Deep dive into your business, competition, and existing campaigns to identify opportunities and gaps.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-num">02</div>
+                <h3>Strategy & Setup</h3>
+                <p>Build comprehensive campaign architecture with laser-focused targeting and compelling creative assets.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-num">03</div>
+                <h3>Launch & Monitor</h3>
+                <p>Deploy campaigns with meticulous tracking, then monitor performance metrics in real-time to catch issues early.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-num">04</div>
+                <h3>Optimize & Scale</h3>
+                <p>Continuously test, refine, and scale what works while eliminating what doesn't—maximizing your ROI.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section>
+        <div class="results-showcase">
+            <div class="section-header" style="margin-bottom: 0;">
+                <h2>Real Results That Matter</h2>
+                <div class="orange-line"></div>
+                <p class="subtitle">These aren't just metrics—they're business outcomes that drive growth and profitability.</p>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <span class="result-value">487%</span>
+                    <span class="result-label">Average ROAS</span>
+                </div>
+
+                <div class="result-item">
+                    <div class="result-icon">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <span class="result-value">62%</span>
+                    <span class="result-label">Lower Cost Per Lead</span>
+                </div>
+
+                <div class="result-item">
+                    <div class="result-icon">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <span class="result-value">3.8X</span>
+                    <span class="result-label">Conversion Rate Increase</span>
+                </div>
+
+                <div class="result-item">
+                    <div class="result-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <span class="result-value">250%</span>
+                    <span class="result-label">Revenue Growth</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Services -->
+    <section style="background: rgba(255, 255, 255, 0.02);">
+        <div class="section-header">
+            <h2>Supercharge Your Ad Performance</h2>
+            <div class="orange-line"></div>
+            <p class="subtitle">Combine paid ads with these services for maximum impact and conversion rates.</p>
+        </div>
+
+        <div class="related-services">
+            <a href="#" class="service-link">
+                <i class="fas fa-code"></i>
+                <h4>Web Developers</h4>
+                <p>Lightning-fast landing pages that convert traffic into customers</p>
+            </a>
+            <a href="#" class="service-link">
+                <i class="fas fa-pen-nib"></i>
+                <h4>Content Writers</h4>
+                <p>Persuasive ad copy and landing page content that drives action</p>
+            </a>
+            <a href="#" class="service-link">
+                <i class="fas fa-palette"></i>
+                <h4>Creative Designers</h4>
+                <p>Eye-catching ad creatives that stop the scroll and capture attention</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section>
+        <div class="final-cta">
+            <h2>Stop Guessing. Start Growing.</h2>
+            <p>Your competitors are already using data-driven advertising to capture market share. Let's build campaigns that outperform them and deliver predictable, scalable growth.</p>
+            <a href="#contact" class="cta-btn"><span>Get Your Free Ad Strategy Session</span></a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Animate elements on scroll
+        document.querySelectorAll('.platform-card, .campaign-card, .service-item, .process-card, .result-item, .service-link').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Animated counters for metrics
+        const animateCounter = (element, target, suffix = '') => {
+            let current = 0;
+            const increment = target / 60;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + suffix;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + suffix;
+                }
+            }, 30);
+        };
+
+        const metricsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const metrics = entry.target.querySelectorAll('.roi-value, .result-value');
+                    metrics.forEach(metric => {
+                        const text = metric.textContent;
+                        if (text.includes('%')) {
+                            const num = parseInt(text);
+                            metric.textContent = '0%';
+                            animateCounter(metric, num, '%');
+                        } else if (text.includes('X')) {
+                            const num = parseFloat(text);
+                            metric.textContent = '0X';
+                            setTimeout(() => {
+                                let current = 0;
+                                const timer = setInterval(() => {
+                                    current += 0.1;
+                                    if (current >= num) {
+                                        metric.textContent = num + 'X';
+                                        clearInterval(timer);
+                                    } else {
+                                        metric.textContent = current.toFixed(1) + 'X';
+                                    }
+                                }, 30);
+                            }, 100);
+                        }
+                    });
+                    metricsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const showcaseElement = document.querySelector('.roi-showcase');
+        const resultsElement = document.querySelector('.results-showcase');
+        if (showcaseElement) metricsObserver.observe(showcaseElement);
+        if (resultsElement) metricsObserver.observe(resultsElement);
+    </script>
+</body>
+</html>
