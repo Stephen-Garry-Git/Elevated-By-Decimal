@@ -6,6 +6,7 @@
     <title>Elevated by Decimal - Digital Marketing & Technology Agency</title>
 
     <link rel="stylesheet" href="../Public/main.css">
+    <link rel="stylesheet" href="./nav_footer_css.css">
     <link rel="shortcut icon" href="../assets/logo/logo-hed.png" type="image/x-icon">
 
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,6 +14,97 @@
 
 </head>
 <body>
+
+    <!-- 
+        NEWSLETTER MODAL HTML
+        Add this code RIGHT AFTER the opening <body> tag in homepage.html
+        (Place it before the navbar)
+    -->
+
+    <!-- Newsletter Modal Overlay -->
+    <div class="newsletter-overlay" id="newsletterOverlay">
+        <div class="newsletter-modal">
+            <!-- Close Button -->
+            <button class="newsletter-close" aria-label="Close newsletter">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="newsletter-header">
+                <div class="newsletter-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h2>Join Our Community!</h2>
+                <p>Get exclusive insights, tips, and updates delivered to your inbox</p>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="newsletter-body">
+                <!-- Benefits List -->
+                <div class="newsletter-benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-check"></i>
+                        <span>Weekly marketing tips & strategies</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check"></i>
+                        <span>Exclusive resources & case studies</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check"></i>
+                        <span>Early access to new services</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check"></i>
+                        <span>Industry news & trends</span>
+                    </div>
+                </div>
+
+                <!-- Subscription Form -->
+                <form id="newsletterForm" class="newsletter-form">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="subscriberName" 
+                            name="name" 
+                            placeholder="Your Name" 
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                            type="email" 
+                            id="subscriberEmail" 
+                            name="email" 
+                            placeholder="Your Email Address" 
+                            required
+                        >
+                    </div>
+                    <button type="submit" class="newsletter-submit">
+                        Subscribe Now
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+
+                <!-- Privacy Notice -->
+                <p class="privacy-text">
+                    We respect your privacy. Unsubscribe anytime. 
+                    <a href="#">Privacy Policy</a>
+                </p>
+            </div>
+
+            <!-- Success Message (Hidden by default) -->
+            <div class="newsletter-success">
+                <div class="success-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h3>You're All Set!</h3>
+                <p>Thanks! Check your inbox for exclusive updates and insights.</p>
+                <button class="close-success-btn">Continue to Website</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar-content">
@@ -360,7 +452,8 @@
     <!--Menu Overlay-->
     <div class="menu-overlay" id="menuOverlay"></div>
 
-    <script src="../Public/nav_footer_js.js"></script>
+    <script src="./nav_footer_js.js"></script>
+    <script src="../Public/newsletter.js"></script>
     <script>
         // Counter Animation
         function animateCounter(element) {

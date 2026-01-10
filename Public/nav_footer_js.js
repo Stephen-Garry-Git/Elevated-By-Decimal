@@ -14,6 +14,14 @@
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     
+
+    const backButton = document.getElementById('backButton');
+        if (backButton) {
+            backButton.addEventListener('click', function() {
+                window.history.back();
+            });
+    }
+
     // ==========================================
     // THEME TOGGLE FUNCTIONALITY
     // ==========================================

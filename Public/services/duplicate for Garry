@@ -1,0 +1,219 @@
+/**
+ * NEWSLETTER MODAL FUNCTIONALITY
+ * Add this to nav_footer_js.js or create a separate newsletter.js file
+ */
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // ==========================================
+    // NEWSLETTER MODAL SETTINGS
+    // ==========================================
+    
+    const NEWSLETTER_CONFIG = {
+        showOnFirstVisit: true,        // Show on first visit
+        showDelay: 1000,               // Delay before showing (milliseconds)
+        cookieName: 'newsletter_subscribed', // LocalStorage key
+        expiryDays: 30                 // How many days before showing again
+    };
+
+    // ==========================================
+    // CHECK IF USER ALREADY SUBSCRIBED
+    // ==========================================
+    
+    function hasSubscribed() {
+        const subscribed = localStorage.getItem(NEWSLETTER_CONFIG.cookieName);
+        if (!subscribed) return false;
+        
+        const expiryDate = new Date(subscribed);
+        const now = new Date();
+        
+        // If expired, remove it
+        if (now > expiryDate) {
+            localStorage.removeItem(NEWSLETTER_CONFIG.cookieName);
+            return false;
+        }
+        
+        return true;
+    }
+
+    // ==========================================
+    // SHOW NEWSLETTER MODAL
+    // ==========================================
+    
+    function showNewsletterModal() {
+        // Don't show if already subscribed
+        if (hasSubscribed()) return;
+        
+        const overlay = document.getElementById('newsletterOverlay');
+        if (!overlay) return;
+        
+        setTimeout(() => {
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }, NEWSLETTER_CONFIG.showDelay);
+    }
+
+    // ==========================================
+    // CLOSE NEWSLETTER MODAL
+    // ==========================================
+    
+    function closeNewsletterModal() {
+        const overlay = document.getElementById('newsletterOverlay');
+        if (!overlay) return;
+        
+        overlay.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+
+    // ==========================================
+    // HANDLE FORM SUBMISSION
+    // ==========================================
+    
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('.newsletter-submit');
+            const nameInput = document.getElementById('subscriberName');
+            const emailInput = document.getElementById('subscriberEmail');
+            
+            // Get values
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            
+            // Validate
+            if (!name || !email) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            if (!isValidEmail(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Show loading state
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+            
+            // Simulate API call (replace with your actual endpoint)
+            try {
+                // REPLACE THIS WITH YOUR ACTUAL API ENDPOINT
+                // Example: await fetch('your-api-endpoint', { method: 'POST', body: JSON.stringify({ name, email }) })
+                
+                await simulateSubscription(name, email);
+                
+                // Mark as subscribed (with expiry)
+                const expiryDate = new Date();
+                expiryDate.setDate(expiryDate.getDate() + NEWSLETTER_CONFIG.expiryDays);
+                localStorage.setItem(NEWSLETTER_CONFIG.cookieName, expiryDate.toISOString());
+                
+                // Show success message
+                showSuccessMessage(name);
+                
+            } catch (error) {
+                console.error('Subscription error:', error);
+                alert('Something went wrong. Please try again.');
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+            }
+        });
+    }
+
+    // ==========================================
+    // EMAIL VALIDATION
+    // ==========================================
+    
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    // ==========================================
+    // SIMULATE SUBSCRIPTION (REPLACE WITH REAL API)
+    // ==========================================
+    
+    async function simulateSubscription(name, email) {
+        // Simulate network delay
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        
+        // Log subscription (for testing)
+        console.log('Newsletter Subscription:', { name, email, timestamp: new Date() });
+        
+        // TODO: Replace this with actual API call to your backend/email service
+        // Example with Mailchimp, ConvertKit, or your own backend:
+        /*
+        const response = await fetch('https://your-api.com/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email })
+        });
+        
+        if (!response.ok) throw new Error('Subscription failed');
+        */
+    }
+
+    // ==========================================
+    // SHOW SUCCESS MESSAGE
+    // ==========================================
+    
+    function showSuccessMessage(name) {
+        const formContainer = document.querySelector('.newsletter-body');
+        const successContainer = document.querySelector('.newsletter-success');
+        
+        if (formContainer && successContainer) {
+            // Update success message with user's name
+            const successMessage = successContainer.querySelector('p');
+            if (successMessage) {
+                successMessage.textContent = `Thanks ${name}! Check your inbox for exclusive updates and insights.`;
+            }
+            
+            // Hide form, show success
+            formContainer.style.display = 'none';
+            successContainer.classList.add('show');
+        }
+    }
+
+    // ==========================================
+    // CLOSE MODAL AFTER SUCCESS
+    // ==========================================
+    
+    const closeSuccessBtn = document.querySelector('.close-success-btn');
+    if (closeSuccessBtn) {
+        closeSuccessBtn.addEventListener('click', closeNewsletterModal);
+    }
+
+    // ==========================================
+    // EVENT LISTENERS
+    // ==========================================
+    
+    // Close button
+    const closeBtn = document.querySelector('.newsletter-close');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeNewsletterModal);
+    }
+
+    // Click outside to close (optional - uncomment if you want this)
+    /*
+    const overlay = document.getElementById('newsletterOverlay');
+    if (overlay) {
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) {
+                closeNewsletterModal();
+            }
+        });
+    }
+    */
+
+    // ==========================================
+    // INITIALIZE
+    // ==========================================
+    
+    // Show modal on page load
+    if (NEWSLETTER_CONFIG.showOnFirstVisit) {
+        showNewsletterModal();
+    }
+
+    console.log('✅ Newsletter modal loaded');
+});
